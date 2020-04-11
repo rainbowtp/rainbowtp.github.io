@@ -5,18 +5,6 @@
     "url": "/medias/book/1.pdf",
     "title": "阅读"
 },{
-    "avatar": "/medias/book/2.png" ,
-    "name": "大话数据结构",
-    "introduction": "略",
-    "url": "/medias/book/2.pdf",
-    "title": "阅读"
-},{
-    "avatar": "/medias/book/3.png" ,
-    "name": "机器学习-周志华",
-    "introduction": "略",
-    "url": "/medias/book/3.pdf",
-    "title": "阅读"
-},{
     "avatar": "/medias/book/4.png" ,
     "name": "高质量 C/C++ 编程指南",
     "introduction": "略",
@@ -51,12 +39,6 @@
     "name": "CompTIA Security Practice Tests9",
     "introduction": "略",
     "url": "/medias/book/9.pdf",
-    "title": "阅读"
-},{
-    "avatar": "/medias/book/10.png" ,
-    "name": "deep-learing with python 中文版",
-    "introduction": "略",
-    "url": "/medias/book/10.pdf",
     "title": "阅读"
 },{
     "avatar": "/medias/book/11.png" ,
