@@ -483,8 +483,8 @@ sakura:
 
 # DaoVoice online contact
 daovoice:
-  enable: false
-  app_id:
+  enable: true
+  app_id: 2cd5ce6a
 
 # Tidio online contact
 tidio:
