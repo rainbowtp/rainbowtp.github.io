@@ -555,13 +555,10 @@ Note left of 起床: 新的一天
 
 ```sequence
 起床->上班: 不要迟到了
-上班->午餐: 吃撑了
 上班->下班:
-Note right of 下班: 下班了
+Note right of 上班: 下班了
 下班->回家:
-Note right of 回家: 到家了
-回家-->>起床:
-Note left of 起床: 新的一天
+Note left of 回家: 到家了
 ```
 
 ### 23.Markdown编写工具
