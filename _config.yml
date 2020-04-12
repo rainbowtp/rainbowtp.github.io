@@ -107,7 +107,7 @@ deploy:
 - type: git
   repo:
     github:  https://github.com/rainbowtp/rainbowtp.github.io.git
-    # coding:  https://e.coding.net/rainbowtp/rainbowtp.git
+    coding:  https://e.coding.net/rainbowtp/rainbowtp.git
     # centos:  git@120.26.173.57:/home/git/blog.git
     # gitee: https://gitee.com/hwsun/hwsun.git
   branch: master
@@ -142,5 +142,5 @@ live2d:
 
 lazyload:
   enable: true 
-  onlypost: true
+  onlypost: false
   loadingImg:  https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/loading.gif
