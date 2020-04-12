@@ -1,16 +1,16 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags:
-img: /source/images/xxx.jpg
+img: https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/ #photo banner .jpg
 
-top: true
-cover: true
-coverImg: /images/1.jpg
+top: false
+cover: false
+coverImg: https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/ # photo banner .jpg
 
 password: 
 toc: true
 mathjax: false
+
 summary: 
 categories: 
 tags:
