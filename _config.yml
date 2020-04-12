@@ -106,8 +106,8 @@ theme: matery
 deploy:
 - type: git
   repo:
-    github:  https://github.com/rainbowtp/rainbowtp.github.io.git
-    # coding:  https://e.coding.net/rainbowtp/rainbowtp.git
+    # github:  https://github.com/rainbowtp/rainbowtp.github.io.git
+    coding:  https://e.coding.net/rainbowtp/rainbowtp.git
     # centos:  git@120.26.173.57:/home/git/blog.git
     # gitee: https://gitee.com/hwsun/hwsun.git
   branch: master
