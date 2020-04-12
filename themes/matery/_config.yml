@@ -99,7 +99,7 @@ video:
   enable: true
   showTitle: true
   title: 精彩视频
-  url: http://lc-2jjinebx.cn-n1.lcfile.com/f03c2b82b72735d86432/Bayes%20theorem%2C%20and%20making%20probability%20intuitive.mp4 # 必填
+  url: https://raw.githubusercontent.com/rainbowtp/blog_photo/master/music/1.mp4 # 必填
   pic:
   thumbnails:
   mutex: false
@@ -430,31 +430,30 @@ libs:
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
 featureImages:
-- /medias/featureimages/0.jpg
-- /medias/featureimages/1.jpg
-- /medias/featureimages/2.jpg
-- /medias/featureimages/3.jpg
-- /medias/featureimages/4.jpg
-- /medias/featureimages/5.jpg
-- /medias/featureimages/6.jpg
-- /medias/featureimages/7.jpg
-- /medias/featureimages/8.jpg
-- /medias/featureimages/9.jpg
-- /medias/featureimages/10.jpg
-- /medias/featureimages/11.jpg
-- /medias/featureimages/12.jpg
-- /medias/featureimages/13.jpg
-- /medias/featureimages/14.jpg
-- /medias/featureimages/15.jpg
-- /medias/featureimages/16.jpg
-- /medias/featureimages/17.jpg
-- /medias/featureimages/18.jpg
-- /medias/featureimages/19.jpg
-- /medias/featureimages/20.jpg
-- /medias/featureimages/21.jpg
-- /medias/featureimages/22.jpg
-- /medias/featureimages/23.jpg
-
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/0.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/1.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/2.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/3.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/4.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/5.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/6.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/7.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/8.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/9.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/10.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/11.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/12.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/13.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/14.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/15.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/16.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/17.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/18.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/19.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/20.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/21.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/22.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/23.jpg
 # default configs that the default policy for every articles/posts
 # default 配置文章的默认转载规则
 

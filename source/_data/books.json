@@ -1,85 +1,85 @@
 [{
-    "avatar": "/medias/book/1.png" ,
+    "avatar": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/1.png" ,
     "name": "程序员的自我修养",
     "introduction": "略",
-    "url": "/medias/book/1.pdf",
+    "url": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/1.pdf",
     "title": "阅读"
 },{
-    "avatar": "/medias/book/4.png" ,
+    "avatar": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/4.png" ,
     "name": "高质量 C/C++ 编程指南",
     "introduction": "略",
-    "url": "/medias/book/4.pdf",
+    "url": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/4.pdf",
     "title": "阅读"
 },{
-    "avatar": "/medias/book/5.png" ,
+    "avatar": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/5.png" ,
     "name": "计算机操作系统",
     "introduction": "略",
-    "url": "/medias/book/5.pdf",
+    "url": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/5.pdf",
     "title": "阅读"
 },{
-    "avatar": "/medias/book/6.png" ,
+    "avatar": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/6.png" ,
     "name": "Docker",
     "introduction": "略",
-    "url": "/medias/book/6.pdf",
+    "url": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/6.pdf",
     "title": "阅读"
 },{
-    "avatar": "/medias/book/7.png" ,
+    "avatar": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/7.png" ,
     "name": "经典算法大全",
     "introduction": "略",
-    "url": "/medias/book/7.pdf",
+    "url": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/7.pdf",
     "title": "阅读"
 },{
-    "avatar": "/medias/book/8.png" ,
+    "avatar": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/8.png" ,
     "name": "渗透测试实践指南： 必知必会的工具与方法",
     "introduction": "略",
-    "url": "/medias/book/8.pdf",
+    "url": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/8.pdf",
     "title": "阅读"
 },{
-    "avatar": "/medias/book/9.png" ,
+    "avatar": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/9.png" ,
     "name": "CompTIA Security Practice Tests9",
     "introduction": "略",
-    "url": "/medias/book/9.pdf",
+    "url": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/9.pdf",
     "title": "阅读"
 },{
-    "avatar": "/medias/book/11.png" ,
+    "avatar": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/11.png" ,
     "name": "GitHub入门与实践",
     "introduction": "略",
-    "url": "/medias/book/11.pdf",
+    "url": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/11.pdf",
     "title": "阅读"
 },{
-    "avatar": "/medias/book/12.png" ,
+    "avatar": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/12.png" ,
     "name": "Linux常用命令集",
     "introduction": "略",
-    "url": "/medias/book/12.pdf",
+    "url": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/12.pdf",
     "title": "阅读"
 },{
-    "avatar": "/medias/book/13.png" ,
+    "avatar": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/13.png" ,
     "name": "Linux命令全集（中文版）",
     "introduction": "略",
-    "url": "/medias/book/13.pdf",
+    "url": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/13.pdf",
     "title": "阅读"
 },{
-    "avatar": "/medias/book/14.png" ,
+    "avatar": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/14.png" ,
     "name": "python",
     "introduction": "略",
-    "url": "/medias/book/14.pdf",
+    "url": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/14.pdf",
     "title": "阅读"
 },{
-    "avatar": "/medias/book/15.png" ,
+    "avatar": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/15.png" ,
     "name": "Shell高级编程(中文版)",
     "introduction": "略",
-    "url": "/medias/book/15.pdf",
+    "url": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/15.pdf",
     "title": "阅读"
 },{
-    "avatar": "/medias/book/16.png" ,
+    "avatar": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/16.png" ,
     "name": "Think Python 像计算机科学家一样思考",
     "introduction": "略",
-    "url": "/medias/book/16.pdf",
+    "url": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/16.pdf",
     "title": "阅读"
 },{
-    "avatar": "/medias/book/17.png" ,
+    "avatar": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/17.png" ,
     "name": "vbird-linux-basic-4e",
     "introduction": "略",
-    "url": "/medias/book/17.pdf",
+    "url": "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/book/17.pdf",
     "title": "阅读"
 }]
