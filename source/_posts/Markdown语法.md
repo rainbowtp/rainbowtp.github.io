@@ -541,8 +541,7 @@ Note left of A代表注释在A的左边
 #### 代码2
 
 ```md
-起床->吃饭: 稀饭油条
-吃饭->上班: 不要迟到了
+起床->上班: 不要迟到了
 上班->午餐: 吃撑了
 上班->下班:
 Note right of 下班: 下班了
@@ -554,7 +553,16 @@ Note left of 起床: 新的一天
 
 #### 演示
 
-![](https://i.loli.net/2020/04/08/dzTSMNPY3BiWhLg.png)
+```sequence
+起床->上班: 不要迟到了
+上班->午餐: 吃撑了
+上班->下班:
+Note right of 下班: 下班了
+下班->回家:
+Note right of 回家: 到家了
+回家-->>起床:
+Note left of 起床: 新的一天
+```
 
 ### 23.Markdown编写工具
 
