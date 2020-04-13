@@ -319,7 +319,7 @@ valine:
   # avatar: 'mm' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
   pageSize: 10
   placeholder: 'Valine 目前使用的是Gravatar 作为评论列表头像。请自行登录或注册Gravatar，然后修改自己的头像。评论的时候，留下在Gravatar注册时所使用的邮箱即可。' # Comment Box placeholder
-  background: /medias/comment_bg.png
+  background: /medias/comment_bg.jpg
 
 # The configuration of the MiniValine comment module is not activated by default.
 # To use it, activate the configuration item and set appId and appKey.
