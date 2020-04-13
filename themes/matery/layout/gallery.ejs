@@ -28,8 +28,8 @@ for (var i = 0, len = photos.length; i < len; i++) {
     imageStr += "<a href=\"https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/" + photo + "\"" +
             "     class=\"photo-item\" rel=\"example_group\"" +
             "     data-fancybox=\"images\">" +
-            "      <img src=\"https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_min/" + photo + "\"" +
-            "       alt=" + photo + ">\n" +
+            "      <img src=\"https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/" + photo + "\"" +
+            "       alt=" + photo + ">" +
             "    </a>"
 
 }
@@ -50,6 +50,6 @@ for (var i = 0, len = photos.length; i < len; i++) {
 <script>
 
   $("a[rel=example_group]").fancybox();
-//   $("#mygallery").justifiedGallery({margins: 5, rowHeight: 150});
+  $("#mygallery").justifiedGallery({margins: 5, rowHeight: 150});
 
 </script>
