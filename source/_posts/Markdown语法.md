@@ -10,7 +10,7 @@ summary: markdown语法总结
 
 img: 
 cover: true
-coverImg: https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/banner/1.jpg
+coverImg: https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/1.jpg
 
 top: true
 toc: true
