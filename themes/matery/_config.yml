@@ -318,7 +318,7 @@ valine:
   visitor: true
   # avatar: 'mm' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
   pageSize: 10
-  placeholder: '想要酷炫的自定义头像吗，快去注册Gravatar吧(～o￣3￣)～' # Comment Box placeholder
+  placeholder: '想拥有酷炫的自定义头像吗，快去注册Gravatar吧(～o￣3￣)～' # Comment Box placeholder
   background: /medias/comment_bg.jpg
 
 # The configuration of the MiniValine comment module is not activated by default.
