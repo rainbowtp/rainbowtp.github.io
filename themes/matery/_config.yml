@@ -265,9 +265,9 @@ mySkills:
 myGallery:
   enable: true
   data:
-    - https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/0.jpg
-    - https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/1.jpg
-    - https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/2.jpg
+    - https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/0.jpg
+    - https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/1.jpg
+    - https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/2.jpg
 
 # Whether to display post-calender in the `archive` page
 # 设置在归档页面中是否显示'文章日历'控件
@@ -430,30 +430,30 @@ libs:
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
 featureImages:
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/0.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/1.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/2.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/3.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/4.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/5.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/6.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/7.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/8.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/9.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/10.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/11.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/12.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/13.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/14.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/15.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/16.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/17.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/18.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/19.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/20.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/21.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/22.jpg
-- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/23.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/0.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/1.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/2.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/3.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/4.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/5.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/6.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/7.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/8.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/9.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/10.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/11.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/12.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/13.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/14.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/15.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/16.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/17.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/18.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/19.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/20.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/21.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/22.jpg
+- https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/23.jpg
 # default configs that the default policy for every articles/posts
 # default 配置文章的默认转载规则
 
