@@ -9,10 +9,10 @@ tags:
 summary: markdown语法总结
 
 img: 
-cover: true
-coverImg: https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/1.jpg
+cover: false
+coverImg: # https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/1.jpg
 
-top: true
+top: false
 toc: true
 mathjax: true
 
