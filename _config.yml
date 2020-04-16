@@ -142,7 +142,7 @@ live2d:
 
 
 lazyload:
-  enable: true 
+  enable: false
   onlypost: false
   loadingImg:  https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/loading.gif
 
