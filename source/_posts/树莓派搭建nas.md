@@ -1,6 +1,6 @@
 ---
 title: 树莓派搭建nas
-img: 'https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/7.jpg'
+img: 
 top: false
 cover: false
 coverImg: 'https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/7.jpg'
@@ -130,7 +130,7 @@ tags:
     ```
     清华源
     软件：
-    ```
+    ```bash
     deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi
     deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi
     ```
@@ -140,7 +140,7 @@ tags:
     ![](https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/20200417002453.png)
     *Ctrl+o Enter Ctrl+x 保存退出*
     系统：
-    ```
+    ```bash
     deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
     deb-src http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
     ```
