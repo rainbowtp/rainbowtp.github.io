@@ -170,10 +170,8 @@ tags:
     [share]
         # 说明信息
         comment = NAS Storage
-        # 要问我为啥多加了个 share，因为我把 ext4 格式的硬盘挂载在 /home/pi/share 下
-        # ext4 文件系统会在根目录下产生 lost+found 文件夹，看着烦，就让它“消失了”（多加一层目录）
         # 共享文件的路径
-        path = /home/pi/share/share
+        path = /home/share
         # 可被其他人看到资源名称（非内容）
         browseable = yes
         # 可写
@@ -197,7 +195,7 @@ tags:
     编辑/etc/rc.local,将`sudo /etc/init.d/smbd restart` `sudo /etc/init.d/nmbd restart`加入到`exit 0`之前
 
 ## 连线
-大多数nas情况下nas传输速度受网络情况影响较大
+大多数情况下nas传输速度受网络情况影响较大
 将树莓派与路由器有线连接可以得到显著的改善
 
 ## 使用

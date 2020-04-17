@@ -8,7 +8,7 @@ tags:
   - 工具书
 summary: markdown语法总结
 
-img: https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/1.jpg
+img: 
 cover: false
 coverImg: # https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/1.jpg
 
