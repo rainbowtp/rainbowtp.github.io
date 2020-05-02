@@ -5,7 +5,7 @@ author: rainbow
 categories:
   - 前端
 tags:
-  - 工具书
+  - markdown
 summary: markdown语法总结
 
 img: 

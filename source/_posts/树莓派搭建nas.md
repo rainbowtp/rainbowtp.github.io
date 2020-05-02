@@ -11,7 +11,7 @@ date: 2020-04-17 02:32:34
 password:
 summary: 树莓派实现小型私有云服务
 categories:
-  - 工具书
+  - 硬件
 tags:
   - 树莓派
 ---
