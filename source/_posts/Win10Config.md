@@ -366,7 +366,7 @@ php
 ```php
 <?php
 phpinfo();
-？>
+?>
 ```
 mysql
 ```php
