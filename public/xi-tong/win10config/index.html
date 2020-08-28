@@ -375,7 +375,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '8fced00b6ce281456d69daef5f2b33eaf1a4a29b5923ebe5f1f2c54f5886c7a3';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -561,7 +561,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.6k
                 </div>
                 
 
@@ -759,15 +759,34 @@ scoop config aria2<span class="token operator">-</span>enabled false<span aria-h
 <li><p><code>;date.timezone =</code>为<code>date.timezone = Asia/Shanghai</code></p>
 </li>
 <li><p>去掉  </p>
-<pre class="line-numbers language-txt"><code class="language-txt">;extension=php_curl.dll
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-txt"><code class="language-txt">  ;extension=php_curl.dll
+
+  ;extension=php_gd2.dll
+
+  ;extension=php_mbstring.dll
+
+  ;extension=php_mysql.dll
+
+  ;extension=php_xmlrpc.dll<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>前面的注释，开启相应的库</p>
+<h3 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h3><p>php</p>
+<pre class="line-numbers language-php"><code class="language-php"><span class="token function">phpinfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>mysql</p>
+<pre class="line-numbers language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token variable">$servername</span> <span class="token operator">=</span> <span class="token string">"localhost"</span><span class="token punctuation">;</span>
+<span class="token variable">$username</span> <span class="token operator">=</span> <span class="token string">"root"</span><span class="token punctuation">;</span>
+<span class="token variable">$password</span> <span class="token operator">=</span> <span class="token string">"root"</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 创建连接</span>
+<span class="token variable">$conn</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">mysqli</span><span class="token punctuation">(</span><span class="token variable">$servername</span><span class="token punctuation">,</span> <span class="token variable">$username</span><span class="token punctuation">,</span> <span class="token variable">$password</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 检测连接</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$conn</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">connect_error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token string">"连接失败: "</span> <span class="token punctuation">.</span> <span class="token variable">$conn</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">connect_error</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> 
+<span class="token keyword">echo</span> <span class="token string">"连接成功"</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
-<p>;extension=php_gd2.dll</p>
-<p>;extension=php_mbstring.dll</p>
-<p>;extension=php_mysql.dll</p>
-<p>;extension=php_xmlrpc.dll</p>
-<pre><code>前面的注释，开启相应的库</code></pre>
+
             </div>
             <hr/>
 
