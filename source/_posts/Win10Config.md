@@ -364,7 +364,9 @@ Path: `D:\scoop\apps\apache\2.4.43\conf\httpd.conf`
 ### Demo
 php
 ```php
+<?php
 phpinfo();
+？>
 ```
 mysql
 ```php
