@@ -774,7 +774,7 @@ $$ x = y^2 + 1 $$<span aria-hidden="true" class="line-numbers-rows"><span></span
 [^1]:Markdown是一种纯文本标记语言               // 在文章最后显示脚注<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h4 id="演示-26"><a href="#演示-26" class="headerlink" title="演示"></a>演示</h4><p>Markdown<a href="Markdown是一种纯文本标记语言">^1</a></p>
 <h3 id="20-自动邮箱链接"><a href="#20-自动邮箱链接" class="headerlink" title="20.自动邮箱链接"></a>20.自动邮箱链接</h3><h4 id="代码-9"><a href="#代码-9" class="headerlink" title="代码"></a>代码</h4><p><code>&lt;xxx@outlook.com&gt;</code></p>
-<h4 id="演示-27"><a href="#演示-27" class="headerlink" title="演示"></a>演示</h4><p><a href="mailto:&#x78;&#120;&#x78;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#x2e;&#x63;&#111;&#x6d;">&#x78;&#120;&#x78;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<h4 id="演示-27"><a href="#演示-27" class="headerlink" title="演示"></a>演示</h4><p><a href="mailto:&#x78;&#120;&#120;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#111;&#107;&#46;&#x63;&#x6f;&#x6d;">&#x78;&#120;&#120;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#111;&#107;&#46;&#x63;&#x6f;&#x6d;</a></p>
 <h3 id="21-流程图"><a href="#21-流程图" class="headerlink" title="21.流程图"></a>21.流程图</h3><h4 id="代码1-3"><a href="#代码1-3" class="headerlink" title="代码1"></a>代码1</h4><pre class="line-numbers language-md"><code class="language-md">st=>start: 启动
 e=>end: 结束           
 op1=>operation: 方案一
@@ -827,7 +827,10 @@ B-->A: 很高兴认识你<span aria-hidden="true" class="line-numbers-rows"><spa
 <h3 id="23-Markdown编写工具"><a href="#23-Markdown编写工具" class="headerlink" title="23.Markdown编写工具"></a>23.Markdown编写工具</h3><ul>
 <li><p>PC端    <a href="https://typora.io/" target="_blank" rel="noopener">Typora</a></p>
 </li>
-<li><p>Android端    <a href="https://writer.drakeet.com/" target="_blank" rel="noopener">纯纯写作</a><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 启动
+<li><p>Android端    <a href="https://writer.drakeet.com/" target="_blank" rel="noopener">纯纯写作</a><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">A->>B: 你好
+Note left of A: 我在左边
+Note right of B: 我在右边
+B-->A: 很高兴认识你</textarea><textarea id="sequence-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 启动
 e=>end: 结束           
 op1=>operation: 方案一
 sub3=>subroutine: 重新制定方案
@@ -836,10 +839,7 @@ io=>inputoutput: 结果满意
 
 st->op1->cond1
 cond1(no,right)->sub3(right)->cond1(no,right)
-cond1(yes)->io->e</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">A->>B: 你好
-Note left of A: 我在左边
-Note right of B: 我在右边
-B-->A: 很高兴认识你</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
+cond1(yes)->io->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
 </li>
 </ul>
 

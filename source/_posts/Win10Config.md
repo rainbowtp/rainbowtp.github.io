@@ -8,7 +8,7 @@ toc: true
 mathjax: false
 author: rainbow
 date: 2020-08-28 14:38:37
-password:
+password: 8fced00b6ce281456d69daef5f2b33eaf1a4a29b5923ebe5f1f2c54f5886c7a3
 summary: win10重装系统
 categories: 系统
 tags: 
@@ -349,16 +349,36 @@ Path: `D:\scoop\apps\apache\2.4.43\conf\httpd.conf`
 - `; extension_dir = "ext"`为`extension_dir = "D:/scoop/apps/php/7.4.9/ext"`
 - `;date.timezone =`为`date.timezone = Asia/Shanghai`
 - 去掉  
-```txt
-;extension=php_curl.dll
+    ```txt
+    ;extension=php_curl.dll
 
-;extension=php_gd2.dll
+    ;extension=php_gd2.dll
 
-;extension=php_mbstring.dll
+    ;extension=php_mbstring.dll
 
-;extension=php_mysql.dll
+    ;extension=php_mysql.dll
 
-;extension=php_xmlrpc.dll
-```
+    ;extension=php_xmlrpc.dll
+    ```
 前面的注释，开启相应的库
-## web安全环境
+### Demo
+php
+```php
+phpinfo();
+```
+mysql
+```php
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+ 
+// 创建连接
+$conn = new mysqli($servername, $username, $password);
+ 
+// 检测连接
+if ($conn->connect_error) {
+    die("连接失败: " . $conn->connect_error);
+} 
+echo "连接成功";
+?>
