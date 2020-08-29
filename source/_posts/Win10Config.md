@@ -8,7 +8,7 @@ toc: true
 mathjax: false
 author: rainbow
 date: 2020-08-28 14:38:37
-password: 8fced00b6ce281456d69daef5f2b33eaf1a4a29b5923ebe5f1f2c54f5886c7a3
+password: 
 summary: win10重装系统
 categories: 系统
 tags: 
@@ -22,6 +22,11 @@ tags:
 
 - 数字激活
   [汉化版](https://github.com/TGSAN/CMWTAT_Digital_Edition/releases/tag/2.5.0.0)
+
+- 更新系统
+- 修改dns
+    首选 8.8.4.4
+    备选 114.114.114.114
 
 - 磁盘分区 C系统：100g D软件:465g E文件:365g
   
@@ -105,13 +110,21 @@ ssh git@github.com # 测试连接到github
 # http代理
 git config --global http.https://github.com.proxy socks5://127.0.0.1:10808 
 # ssh代理
-"Host github.com`n`tProxyCommand D:/scoop/apps/connect/1.100/connect.exe -S 127.0.0.1:10808 %h %p" > C:\Users\rainbow\.ssh\config
+"Host github.com`n`tProxyCommand D:/scoop/apps/connect/1.100/connect.exe -S 127.0.0.1:10808 %h %p" | Out-File -Encoding utf8 C:\Users\rainbow\.ssh\config
 # 完全放弃http协议，使用ssh协议，安全和速度都优于http
 # eg： git clone git@github.com:rainbowtp/Scoop_bucket.git
 ```
+配置aria2
+```powershell
+scoop config aria2-max-connection-per-server 16 ; scoop config aria2-split 16 ; scoop config aria2-min-split-size 1M
+```
+# 如果报错，停用aria2
+```powershell
+scoop config aria2-enabled false
+```
 安装程序
 ```powershell
-scoop bucket add extras ; scoop bucket add nonportable ; scoop bucket add Rainbow https://github.com/rainbowtp/Scoop_bucket.git ; scoop update ; scoop install install ; install ; scoop uninstall install # go!
+scoop bucket add extras ; scoop bucket add nonportable ; scoop bucket add Rainbow https://github.com/rainbowtp/Scoop_bucket.git ; scoop bucket add Ash258 https://github.com/Ash258/Scoop-Ash258 ; scoop update ; scoop install install ; install ; scoop uninstall install # go!
 ```
 ### windows terminal
 
@@ -191,19 +204,6 @@ scoop bucket add extras ; scoop bucket add nonportable ; scoop bucket add Rainbo
 
 安装插件：编码小助手 音乐播放器 php文档 网页快开 小说阅读 聚合翻译 便民工具 本地搜索 kali工具介绍 程序员手册 python3.8文档 Linux命令文档 todo 自动化助手 
 
-### aria2
-
-```powershell
-scoop config aria2-max-connection-per-server 16 ; scoop config aria2-split 16 ; scoop config aria2-min-split-size 1M
-```
-
-```powershell
-# 如果报错，停用aria2
-scoop config aria2-enabled false
-```
-
-
-
 ### steam
 
 下载 `Dota2` `WallpaperEngine`,并设置`WallpaperEngine`启动优先级
@@ -260,35 +260,15 @@ scoop config aria2-enabled false
 登录账户
 
 修改文件路径到E盘
-
+### VMware
+```txt
+UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA
+```
 
 ### MSIDragonCenter
 
 游戏加速 更改RGB灯光
 
-### VM15
-
-激活码：
-
-```txt
-UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA
-```
-
-```txt
-VF750-4MX5Q-488DQ-9WZE9-ZY2D6
-```
-
-```txt
-UU54R-FVD91-488PP-7NNGC-ZFAX6
-```
-
-```txt
-YC74H-FGF92-081VZ-R5QNG-P6RY4
-```
-
-```txt
-YC34H-6WWDK-085MQ-JYPNX-NZRA2
-```
 
 ## DL环境
 
