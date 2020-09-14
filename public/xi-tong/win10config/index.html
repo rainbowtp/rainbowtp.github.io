@@ -375,7 +375,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '8fced00b6ce281456d69daef5f2b33eaf1a4a29b5923ebe5f1f2c54f5886c7a3';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -554,7 +554,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-28
+                    2020-09-14
                 </div>
                 
 
@@ -582,6 +582,10 @@
 <li><p>进入系统时不要联网，直接使用Microsoft账户会更改注册表文件，改回来很麻烦</p>
 </li>
 <li><p>数字激活<br><a href="https://github.com/TGSAN/CMWTAT_Digital_Edition/releases/tag/2.5.0.0" target="_blank" rel="noopener">汉化版</a></p>
+</li>
+<li><p>更新系统</p>
+</li>
+<li><p>修改dns<br>  首选 8.8.4.4<br>  备选 114.114.114.114</p>
 </li>
 <li><p>磁盘分区 C系统：100g D软件:465g E文件:365g</p>
 <p>  下载：E:\Downloads<br>  文档：E:\Documents</p>
@@ -635,18 +639,21 @@ ssh git@github<span class="token punctuation">.</span>com <span class="token com
 <span class="token comment" spellcheck="true"># http代理</span>
 git config <span class="token operator">--</span>global http<span class="token punctuation">.</span>https:<span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token punctuation">.</span>proxy socks5:<span class="token operator">/</span><span class="token operator">/</span>127<span class="token punctuation">.</span>0<span class="token punctuation">.</span>0<span class="token punctuation">.</span>1:10808 
 <span class="token comment" spellcheck="true"># ssh代理</span>
-<span class="token string">"Host github.com`n`tProxyCommand D:/scoop/apps/connect/1.100/connect.exe -S 127.0.0.1:10808 %h %p"</span> > C:\Users\rainbow\<span class="token punctuation">.</span>ssh\config
+<span class="token string">"Host github.com`n`tProxyCommand D:/scoop/apps/connect/1.100/connect.exe -S 127.0.0.1:10808 %h %p"</span> <span class="token punctuation">|</span> <span class="token function">Out-File</span> <span class="token operator">-</span>Encoding utf8 C:\Users\rainbow\<span class="token punctuation">.</span>ssh\config
 <span class="token comment" spellcheck="true"># 完全放弃http协议，使用ssh协议，安全和速度都优于http</span>
 <span class="token comment" spellcheck="true"># eg： git clone git@github.com:rainbowtp/Scoop_bucket.git</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>配置aria2</p>
+<pre class="line-numbers language-powershell"><code class="language-powershell">scoop config aria2<span class="token operator">-</span>max<span class="token operator">-</span>connection<span class="token operator">-</span>per<span class="token operator">-</span>server 16 <span class="token punctuation">;</span> scoop config aria2<span class="token operator">-</span>split 16 <span class="token punctuation">;</span> scoop config aria2<span class="token operator">-</span>min<span class="token operator">-</span>split<span class="token operator">-</span>size 1M<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="如果报错，停用aria2"><a href="#如果报错，停用aria2" class="headerlink" title="如果报错，停用aria2"></a>如果报错，停用aria2</h1><pre class="line-numbers language-powershell"><code class="language-powershell">scoop config aria2<span class="token operator">-</span>enabled false<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>安装程序</p>
-<pre class="line-numbers language-powershell"><code class="language-powershell">scoop bucket add extras <span class="token punctuation">;</span> scoop bucket add nonportable <span class="token punctuation">;</span> scoop bucket add Rainbow https:<span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>rainbowtp<span class="token operator">/</span>Scoop_bucket<span class="token punctuation">.</span>git <span class="token punctuation">;</span> scoop update <span class="token punctuation">;</span> scoop install install <span class="token punctuation">;</span> install <span class="token punctuation">;</span> scoop uninstall install <span class="token comment" spellcheck="true"># go!</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-powershell"><code class="language-powershell">scoop bucket add extras <span class="token punctuation">;</span> scoop bucket add nonportable <span class="token punctuation">;</span> scoop bucket add Rainbow https:<span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>rainbowtp<span class="token operator">/</span>Scoop_bucket<span class="token punctuation">.</span>git <span class="token punctuation">;</span> scoop bucket add Ash258 https:<span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>Ash258<span class="token operator">/</span>Scoop<span class="token operator">-</span>Ash258 <span class="token punctuation">;</span> scoop update <span class="token punctuation">;</span> scoop install install <span class="token punctuation">;</span> install <span class="token punctuation">;</span> scoop uninstall install <span class="token comment" spellcheck="true"># go!</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="windows-terminal"><a href="#windows-terminal" class="headerlink" title="windows terminal"></a>windows terminal</h3><ol>
 <li><p>设置右键快捷键：</p>
 <pre class="line-numbers language-powershell"><code class="language-powershell"> Windows Registry Editor Version 5<span class="token punctuation">.</span>00
 
  <span class="token namespace">[HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminal]</span>
  @=<span class="token string">"Windows Terminal Here"</span>
- <span class="token string">"Icon"</span>=<span class="token string">"D:\\scoop\\data\\windows-terminal\\terminal.ico"</span>
+ <span class="token string">"Icon"</span>=<span class="token string">"https://raw.githubusercontent.com/microsoft/terminal/master/res/terminal.ico"</span>
 
  <span class="token namespace">[HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminal\command]</span>
  @=<span class="token string">"D:\\scoop\\apps\\windows-terminal\\current\\WindowsTerminal.exe"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
@@ -691,9 +698,6 @@ git config <span class="token operator">--</span>global http<span class="token p
 <p>全局快捷键：Alt+Space</p>
 <p>本地应用搜索：D:\scoop</p>
 <p>安装插件：编码小助手 音乐播放器 php文档 网页快开 小说阅读 聚合翻译 便民工具 本地搜索 kali工具介绍 程序员手册 python3.8文档 Linux命令文档 todo 自动化助手 </p>
-<h3 id="aria2"><a href="#aria2" class="headerlink" title="aria2"></a>aria2</h3><pre class="line-numbers language-powershell"><code class="language-powershell">scoop config aria2<span class="token operator">-</span>max<span class="token operator">-</span>connection<span class="token operator">-</span>per<span class="token operator">-</span>server 16 <span class="token punctuation">;</span> scoop config aria2<span class="token operator">-</span>split 16 <span class="token punctuation">;</span> scoop config aria2<span class="token operator">-</span>min<span class="token operator">-</span>split<span class="token operator">-</span>size 1M<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-powershell"><code class="language-powershell"><span class="token comment" spellcheck="true"># 如果报错，停用aria2</span>
-scoop config aria2<span class="token operator">-</span>enabled false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h3 id="steam"><a href="#steam" class="headerlink" title="steam"></a>steam</h3><p>下载 <code>Dota2</code> <code>WallpaperEngine</code>,并设置<code>WallpaperEngine</code>启动优先级</p>
 <h3 id="captura"><a href="#captura" class="headerlink" title="captura"></a>captura</h3><p>开机启动和常用快捷键</p>
 <h3 id="diskgenius"><a href="#diskgenius" class="headerlink" title="diskgenius"></a>diskgenius</h3><p>固定到开始菜单</p>
@@ -709,15 +713,12 @@ scoop config aria2<span class="token operator">-</span>enabled false<span aria-h
 <p>修改文件路径到E盘</p>
 <h3 id="TIM"><a href="#TIM" class="headerlink" title="TIM"></a>TIM</h3><p>登录账户</p>
 <p>修改文件路径到E盘</p>
+<h3 id="VMware"><a href="#VMware" class="headerlink" title="VMware"></a>VMware</h3><pre class="line-numbers language-txt"><code class="language-txt">UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="MSIDragonCenter"><a href="#MSIDragonCenter" class="headerlink" title="MSIDragonCenter"></a>MSIDragonCenter</h3><p>游戏加速 更改RGB灯光</p>
-<h3 id="VM15"><a href="#VM15" class="headerlink" title="VM15"></a>VM15</h3><p>激活码：</p>
-<pre class="line-numbers language-txt"><code class="language-txt">UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-txt"><code class="language-txt">VF750-4MX5Q-488DQ-9WZE9-ZY2D6<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-txt"><code class="language-txt">UU54R-FVD91-488PP-7NNGC-ZFAX6<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-txt"><code class="language-txt">YC74H-FGF92-081VZ-R5QNG-P6RY4<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-txt"><code class="language-txt">YC34H-6WWDK-085MQ-JYPNX-NZRA2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="DL环境"><a href="#DL环境" class="headerlink" title="DL环境"></a>DL环境</h2><p>conda代理</p>
 <pre class="line-numbers language-powershell"><code class="language-powershell"><span class="token string">"auto_activate_base: false`nproxy_servers:`n`thttp: http://127.0.0.1:10809`n`thttps: https://127.0.0.1:10809 "</span> > C:\Users\rainbow\<span class="token punctuation">.</span>condarc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>conda初始化</p>
+<pre class="line-numbers language-powershell"><code class="language-powershell">conda init powershell<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>建立gluon环境</p>
 <pre class="line-numbers language-powershell"><code class="language-powershell">conda create <span class="token operator">-</span>n gluon python=3<span class="token punctuation">.</span>6 cudatoolkit=10<span class="token punctuation">.</span>2 mkl <span class="token punctuation">;</span> conda activate gluon <span class="token punctuation">;</span> pip install mxnet<span class="token operator">-</span>cu102mkl==1<span class="token punctuation">.</span>6<span class="token punctuation">.</span>0 <span class="token operator">-</span>f https:<span class="token operator">/</span><span class="token operator">/</span>dist<span class="token punctuation">.</span>mxnet<span class="token punctuation">.</span>io<span class="token operator">/</span>python d2lzh==1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>0 jupyter==1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>0 matplotlib==2<span class="token punctuation">.</span>2<span class="token punctuation">.</span>2 pandas==0<span class="token punctuation">.</span>23<span class="token punctuation">.</span>4  d2lzh==1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>0 jupyter==1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>0 matplotlib==2<span class="token punctuation">.</span>2<span class="token punctuation">.</span>2 pandas==0<span class="token punctuation">.</span>23<span class="token punctuation">.</span>4 <span class="token operator">--</span>proxy=127<span class="token punctuation">.</span>0<span class="token punctuation">.</span>0<span class="token punctuation">.</span>1:10809 <span class="token comment" spellcheck="true"># gluon</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="php环境"><a href="#php环境" class="headerlink" title="php环境"></a>php环境</h2><h3 id="apache"><a href="#apache" class="headerlink" title="apache"></a>apache</h3><p>Path: <code>D:\scoop\apps\apache\2.4.43\conf\httpd.conf</code></p>
@@ -1287,51 +1288,46 @@ scoop config aria2<span class="token operator">-</span>enabled false<span aria-h
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/xi-tong/win10config/">
+                <a href="/wen-xue/sui-bi/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo/3.jpg" class="responsive-img" alt="Win10Config">
                         
-                        <span class="card-title">Win10Config</span>
+                        <img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/photo_mid/13.jpg" class="responsive-img" alt="随笔">
+                        
+                        <span class="card-title">随笔</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            win10重装系统
+                            记录一些自己的话
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-28
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-14
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%B3%BB%E7%BB%9F/" class="post-category">
-                                    系统
+                            <a href="/categories/%E6%96%87%E5%AD%A6/" class="post-category">
+                                    文学
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/win10/">
-                        <span class="chip bg-color">win10</span>
-                    </a>
-                    
-                    <a href="/tags/scoop/">
-                        <span class="chip bg-color">scoop</span>
+                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                        <span class="chip bg-color">随笔</span>
                     </a>
                     
                 </div>

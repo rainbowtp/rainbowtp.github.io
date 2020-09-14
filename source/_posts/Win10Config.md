@@ -134,7 +134,7 @@ scoop bucket add extras ; scoop bucket add nonportable ; scoop bucket add Rainbo
 
     [HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminal]
     @="Windows Terminal Here"
-    "Icon"="D:\\scoop\\data\\windows-terminal\\terminal.ico"
+    "Icon"="https://raw.githubusercontent.com/microsoft/terminal/master/res/terminal.ico"
 
     [HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminal\command]
     @="D:\\scoop\\apps\\windows-terminal\\current\\WindowsTerminal.exe"
@@ -276,6 +276,11 @@ conda代理
 
 ```powershell
 "auto_activate_base: false`nproxy_servers:`n`thttp: http://127.0.0.1:10809`n`thttps: https://127.0.0.1:10809 " > C:\Users\rainbow\.condarc
+```
+
+conda初始化
+```powershell
+conda init powershell
 ```
 
 建立gluon环境

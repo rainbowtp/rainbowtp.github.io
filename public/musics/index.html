@@ -412,9 +412,9 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/banner_mid/5.jpg)');
+    var bannerUrl = "https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo/banner_mid/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
-
 
     </div>
 </div>
