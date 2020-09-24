@@ -245,13 +245,13 @@ mySkills:
       percent: 85%
     JavaScript:
       background: 'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'
-      percent: 80%
+      percent: 60%
     HTML5:
       background: 'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'
-      percent: 80%
+      percent: 40%
     CSS:
       background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
-      percent: 70%
+      percent: 50%
     DL:
       background: 'linear-gradient(to right, #4CAF50 0%, #81C784 100%)'
       percent: 90%
@@ -531,7 +531,7 @@ subtitle:
   showCursor: true # 是否显示光标
   startDelay: 300 # 开始延迟
   typeSpeed: 100 # 打字速度
-  backSpeed: 50 # 删除速度
+  backSpeed: 5 # 删除速度
   sub1: 从来没有真正的绝境, 只有心灵的迷途
   sub2: Never really desperate, only the lost of the soul
 

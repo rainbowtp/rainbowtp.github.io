@@ -1,5 +1,5 @@
 ---
-title: cracer入门day1
+title: cracer入门
 img: 
 top: false
 cover: false
