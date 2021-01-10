@@ -29,8 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-material-light.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 
 <body>
@@ -554,7 +553,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-14
+                    2020-12-24
                 </div>
                 
 
@@ -596,18 +595,18 @@
 <li><p>分辨率</p>
 </li>
 <li><p>开始菜单主题色背景<br>  创建文件 20H2.reg 并写入以下内容:</p>
-<pre class="line-numbers language-powershell"><code class="language-powershell">  Windows Registry Editor Version 5<span class="token punctuation">.</span>00
+<pre><code class="powershell">  Windows Registry Editor Version 5.00
 
-  <span class="token namespace">[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FeatureManagement\Overrides\0\2093230218]</span>
+  [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FeatureManagement\Overrides\0\2093230218]
 
-  <span class="token string">"EnabledState"</span>=dword:00000002
+  &quot;EnabledState&quot;=dword:00000002
 
-  <span class="token string">"EnabledStateOptions"</span>=dword:00000000
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  &quot;EnabledStateOptions&quot;=dword:00000000
+</code></pre>
 <p>  保存并执行，然后重启电脑</p>
 </li>
 <li><p>字体</p>
-<pre class="line-numbers language-powershell"><code class="language-powershell">  git clone git@github<span class="token punctuation">.</span>com:rainbowtp<span class="token operator">/</span>fonts<span class="token punctuation">.</span>git C:\Users\rainbow\Desktop\fonts<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="powershell">  git clone git@github.com:rainbowtp/fonts.git C:\Users\rainbow\Desktop\fonts</code></pre>
 <p>  下载苹方字体并安装，使用<code>MacType</code>进行替换<br>  字体显示-125% 显示-100% 桌面-查看-小图标 </p>
 </li>
 </ul>
@@ -622,51 +621,51 @@
 <p><code>github.com</code></p>
 <p><code>github.global.ssl.fastly.net</code></p>
 <h2 id="软件-scoop"><a href="#软件-scoop" class="headerlink" title="软件-scoop"></a>软件-scoop</h2><p>安装Scoop，以管理员权限运行powershell</p>
-<pre class="line-numbers language-powershell"><code class="language-powershell"><span class="token function">Set</span><span class="token operator">-</span>ExecutionPolicy UnRestricted <span class="token comment" spellcheck="true"># 给予powershell执行脚本的权限</span>
-<span class="token variable">$env</span>:SCOOP=<span class="token string">'D:\scoop'</span> <span class="token comment" spellcheck="true"># 自定义scoop安装路径</span>
-<span class="token namespace">[environment]</span>::setEnvironmentVariable<span class="token punctuation">(</span><span class="token string">'SCOOP'</span><span class="token punctuation">,</span><span class="token variable">$env</span>:SCOOP<span class="token punctuation">,</span><span class="token string">'User'</span><span class="token punctuation">)</span>
-<span class="token function">iwr</span> <span class="token operator">-</span>useb get<span class="token punctuation">.</span>scoop<span class="token punctuation">.</span>sh <span class="token punctuation">|</span> <span class="token function">iex</span> <span class="token comment" spellcheck="true"># 安装scoop</span>
-<span class="token comment" spellcheck="true">#  定制自己的bucket</span>
-<span class="token comment" spellcheck="true">##  参考[scoop官方文档](https://github.com/lukesampson/scoop/wiki/Buckets)</span>
-<span class="token comment" spellcheck="true">#设置http代理 在C:\Users\user\.config\scoop 查看</span>
-scoop config proxy 127<span class="token punctuation">.</span>0<span class="token punctuation">.</span>0<span class="token punctuation">.</span>1:10809<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="安装配置git"><a href="#安装配置git" class="headerlink" title="安装配置git"></a>安装配置git</h1><pre class="line-numbers language-powershell"><code class="language-powershell">scoop install git
-ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token operator">-</span>C “1844283837@qq<span class="token punctuation">.</span>com” <span class="token comment" spellcheck="true"># ssh密钥,连续敲三次Space</span>
-git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">"Rainbow"</span>
-git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">"1844283837@qq.com"</span>
-<span class="token function">Get-Content</span> C:\Users\rainbow\<span class="token punctuation">.</span>ssh\id_rsa<span class="token punctuation">.</span>pub > C:\Users\rainbow\Desktop\ssh_pub<span class="token punctuation">.</span>txt <span class="token comment" spellcheck="true"># 复制填入github的ssh设置中</span>
-ssh git@github<span class="token punctuation">.</span>com <span class="token comment" spellcheck="true"># 测试连接到github</span>
-<span class="token comment" spellcheck="true"># http代理</span>
-git config <span class="token operator">--</span>global http<span class="token punctuation">.</span>https:<span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token punctuation">.</span>proxy socks5:<span class="token operator">/</span><span class="token operator">/</span>127<span class="token punctuation">.</span>0<span class="token punctuation">.</span>0<span class="token punctuation">.</span>1:10808 
-<span class="token comment" spellcheck="true"># ssh代理</span>
-<span class="token string">"Host github.com`n`tProxyCommand D:/scoop/apps/connect/1.100/connect.exe -S 127.0.0.1:10808 %h %p"</span> <span class="token punctuation">|</span> <span class="token function">Out-File</span> <span class="token operator">-</span>Encoding utf8 C:\Users\rainbow\<span class="token punctuation">.</span>ssh\config
-<span class="token comment" spellcheck="true"># 完全放弃http协议，使用ssh协议，安全和速度都优于http</span>
-<span class="token comment" spellcheck="true"># eg： git clone git@github.com:rainbowtp/Scoop_bucket.git</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="powershell">Set-ExecutionPolicy UnRestricted # 给予powershell执行脚本的权限
+$env:SCOOP=&#39;D:\scoop&#39; # 自定义scoop安装路径
+[environment]::setEnvironmentVariable(&#39;SCOOP&#39;,$env:SCOOP,&#39;User&#39;)
+iwr -useb get.scoop.sh | iex # 安装scoop
+#  定制自己的bucket
+##  参考[scoop官方文档](https://github.com/lukesampson/scoop/wiki/Buckets)
+#设置http代理 在C:\Users\user\.config\scoop 查看
+scoop config proxy 127.0.0.1:10809</code></pre>
+<h1 id="安装配置git"><a href="#安装配置git" class="headerlink" title="安装配置git"></a>安装配置git</h1><pre><code class="powershell">scoop install git
+ssh-keygen -t rsa -C “1844283837@qq.com” # ssh密钥,连续敲三次Space
+git config --global user.name &quot;Rainbow&quot;
+git config --global user.email &quot;1844283837@qq.com&quot;
+Get-Content C:\Users\rainbow\.ssh\id_rsa.pub &gt; C:\Users\rainbow\Desktop\ssh_pub.txt # 复制填入github的ssh设置中
+ssh git@github.com # 测试连接到github
+# http代理
+git config --global http.https://github.com.proxy socks5://127.0.0.1:10808 
+# ssh代理
+&quot;Host github.com`n`tProxyCommand D:/scoop/apps/connect/1.100/connect.exe -S 127.0.0.1:10808 %h %p&quot; | Out-File -Encoding utf8 C:\Users\rainbow\.ssh\config
+# 完全放弃http协议，使用ssh协议，安全和速度都优于http
+# eg： git clone git@github.com:rainbowtp/Scoop_bucket.git</code></pre>
 <p>配置aria2</p>
-<pre class="line-numbers language-powershell"><code class="language-powershell">scoop config aria2<span class="token operator">-</span>max<span class="token operator">-</span>connection<span class="token operator">-</span>per<span class="token operator">-</span>server 16 <span class="token punctuation">;</span> scoop config aria2<span class="token operator">-</span>split 16 <span class="token punctuation">;</span> scoop config aria2<span class="token operator">-</span>min<span class="token operator">-</span>split<span class="token operator">-</span>size 1M<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h1 id="如果报错，停用aria2"><a href="#如果报错，停用aria2" class="headerlink" title="如果报错，停用aria2"></a>如果报错，停用aria2</h1><pre class="line-numbers language-powershell"><code class="language-powershell">scoop config aria2<span class="token operator">-</span>enabled false<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="powershell">scoop config aria2-max-connection-per-server 16 ; scoop config aria2-split 16 ; scoop config aria2-min-split-size 1M</code></pre>
+<h1 id="如果报错，停用aria2"><a href="#如果报错，停用aria2" class="headerlink" title="如果报错，停用aria2"></a>如果报错，停用aria2</h1><pre><code class="powershell">scoop config aria2-enabled false</code></pre>
 <p>安装程序</p>
-<pre class="line-numbers language-powershell"><code class="language-powershell">scoop bucket add extras <span class="token punctuation">;</span> scoop bucket add nonportable <span class="token punctuation">;</span> scoop bucket add Rainbow https:<span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>rainbowtp<span class="token operator">/</span>Scoop_bucket<span class="token punctuation">.</span>git <span class="token punctuation">;</span> scoop bucket add Ash258 https:<span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>Ash258<span class="token operator">/</span>Scoop<span class="token operator">-</span>Ash258 <span class="token punctuation">;</span> scoop update <span class="token punctuation">;</span> scoop install install <span class="token punctuation">;</span> install <span class="token punctuation">;</span> scoop uninstall install <span class="token comment" spellcheck="true"># go!</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="powershell">scoop bucket add extras ; scoop bucket add nonportable ; scoop bucket add Rainbow https://github.com/rainbowtp/Scoop_bucket.git ; scoop bucket add Ash258 https://github.com/Ash258/Scoop-Ash258 ; scoop update ; scoop install install ; install ; scoop uninstall install # go!</code></pre>
 <h3 id="windows-terminal"><a href="#windows-terminal" class="headerlink" title="windows terminal"></a>windows terminal</h3><ol>
 <li><p>设置右键快捷键：</p>
-<pre class="line-numbers language-powershell"><code class="language-powershell"> Windows Registry Editor Version 5<span class="token punctuation">.</span>00
+<pre><code class="powershell"> Windows Registry Editor Version 5.00
 
- <span class="token namespace">[HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminal]</span>
- @=<span class="token string">"Windows Terminal Here"</span>
- <span class="token string">"Icon"</span>=<span class="token string">"https://raw.githubusercontent.com/microsoft/terminal/master/res/terminal.ico"</span>
+ [HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminal]
+ @=&quot;Windows Terminal Here&quot;
+ &quot;Icon&quot;=&quot;https://raw.githubusercontent.com/microsoft/terminal/master/res/terminal.ico&quot;
 
- <span class="token namespace">[HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminal\command]</span>
- @=<span class="token string">"D:\\scoop\\apps\\windows-terminal\\current\\WindowsTerminal.exe"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+ [HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminal\command]
+ @=&quot;D:\\scoop\\apps\\windows-terminal\\current\\WindowsTerminal.exe&quot;</code></pre>
 <p> 将以上代码保存到扩展名为 .reg 的文件中，双击打开</p>
 <p> 当前目录打开时，Terminal 里的路径不是当前目录</p>
 <p> 检查一下配置文件，看下是否有以下内容，删除之后就可以了。</p>
-<pre class="line-numbers language-json"><code class="language-json"> <span class="token punctuation">{</span>
-     <span class="token property">"profiles"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-         <span class="token punctuation">{</span>
-             <span class="token property">"startingDirectory"</span> <span class="token operator">:</span> <span class="token string">"%USERPROFILE%"</span>
-         <span class="token punctuation">}</span>
-     <span class="token punctuation">]</span>
- <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="json"> {
+     &quot;profiles&quot;: [
+         {
+             &quot;startingDirectory&quot; : &quot;%USERPROFILE%&quot;
+         }
+     ]
+ }</code></pre>
 <p> 需要修改为</p>
 <p> <code>&quot;startingDirectory&quot;: null</code></p>
 <p> 如果没有就自己配置这个参数设置为null</p>
@@ -681,7 +680,7 @@ git config <span class="token operator">--</span>global http<span class="token p
 <p> 参考<a href="https://sspai.com/post/59380" target="_blank" rel="noopener">少数派文章</a></p>
 </li>
 <li><p>自定义指令(wamp)</p>
-<pre class="line-numbers language-powershell"><code class="language-powershell"> <span class="token string">"Import-Module oh-my-posh`nSet-Theme Sorin`nFunction apache_start(){`n`tsudo httpd -k start`n}`nFunction apache_stop(){`n`tsudo httpd -k stop`n}`nFunction mysql_start(){`n`tsudo net start mysql`n}`nFunction mysql_stop(){`n`tsudo net stop mysql`n}`n`nSet-Alias apache apache_start`nSet-Alias apachestop apache_stop`nSet-Alias mysqlstart mysql_start`nSet-Alias mysqlstop mysql_stop"</span> >> <span class="token variable">$profile</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="powershell"> &quot;Import-Module oh-my-posh`nSet-Theme Sorin`nFunction apache_start(){`n`tsudo httpd -k start`n}`nFunction apache_stop(){`n`tsudo httpd -k stop`n}`nFunction mysql_start(){`n`tsudo net start mysql`n}`nFunction mysql_stop(){`n`tsudo net stop mysql`n}`n`nSet-Alias apache apache_start`nSet-Alias apachestop apache_stop`nSet-Alias mysqlstart mysql_start`nSet-Alias mysqlstop mysql_stop&quot; &gt;&gt; $profile</code></pre>
 <h3 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h3></li>
 </ol>
 <p>安装插件<code>Settings Sync</code>来同步插件配置</p>
@@ -689,10 +688,10 @@ git config <span class="token operator">--</span>global http<span class="token p
 <ul>
 <li><p>编辑器：Fontsize <code>14</code>   </p>
 <p>  Fontfamily </p>
-<pre class="line-numbers language-txt"><code class="language-txt">  Operator Mono, Dank Mono, Fira Code Light<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="txt">  Operator Mono, Dank Mono, Fira Code Light</code></pre>
 </li>
 <li><p>终端：<br>  Fontfamily </p>
-<pre class="line-numbers language-txt"><code class="language-txt">  DejaVu Sans Mono for Powerline<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="txt">  DejaVu Sans Mono for Powerline</code></pre>
 <h3 id="utools"><a href="#utools" class="headerlink" title="utools"></a>utools</h3></li>
 </ul>
 <p>全局快捷键：Alt+Space</p>
@@ -713,32 +712,32 @@ git config <span class="token operator">--</span>global http<span class="token p
 <p>修改文件路径到E盘</p>
 <h3 id="TIM"><a href="#TIM" class="headerlink" title="TIM"></a>TIM</h3><p>登录账户</p>
 <p>修改文件路径到E盘</p>
-<h3 id="VMware"><a href="#VMware" class="headerlink" title="VMware"></a>VMware</h3><pre class="line-numbers language-txt"><code class="language-txt">UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="VMware"><a href="#VMware" class="headerlink" title="VMware"></a>VMware</h3><pre><code class="txt">UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA</code></pre>
 <h3 id="MSIDragonCenter"><a href="#MSIDragonCenter" class="headerlink" title="MSIDragonCenter"></a>MSIDragonCenter</h3><p>游戏加速 更改RGB灯光</p>
 <h2 id="DL环境"><a href="#DL环境" class="headerlink" title="DL环境"></a>DL环境</h2><p>conda代理</p>
-<pre class="line-numbers language-powershell"><code class="language-powershell"><span class="token string">"auto_activate_base: false`nproxy_servers:`n`thttp: http://127.0.0.1:10809`n`thttps: https://127.0.0.1:10809 "</span> > C:\Users\rainbow\<span class="token punctuation">.</span>condarc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="powershell">&quot;auto_activate_base: false`nproxy_servers:`n`thttp: http://127.0.0.1:10809`n`thttps: https://127.0.0.1:10809 &quot; &gt; C:\Users\rainbow\.condarc</code></pre>
 <p>conda初始化</p>
-<pre class="line-numbers language-powershell"><code class="language-powershell">conda init powershell<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="powershell">conda init powershell</code></pre>
 <p>建立gluon环境</p>
-<pre class="line-numbers language-powershell"><code class="language-powershell">conda create <span class="token operator">-</span>n gluon python=3<span class="token punctuation">.</span>6 cudatoolkit=10<span class="token punctuation">.</span>2 mkl <span class="token punctuation">;</span> conda activate gluon <span class="token punctuation">;</span> pip install mxnet<span class="token operator">-</span>cu102mkl==1<span class="token punctuation">.</span>6<span class="token punctuation">.</span>0 <span class="token operator">-</span>f https:<span class="token operator">/</span><span class="token operator">/</span>dist<span class="token punctuation">.</span>mxnet<span class="token punctuation">.</span>io<span class="token operator">/</span>python d2lzh==1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>0 jupyter==1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>0 matplotlib==2<span class="token punctuation">.</span>2<span class="token punctuation">.</span>2 pandas==0<span class="token punctuation">.</span>23<span class="token punctuation">.</span>4  d2lzh==1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>0 jupyter==1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>0 matplotlib==2<span class="token punctuation">.</span>2<span class="token punctuation">.</span>2 pandas==0<span class="token punctuation">.</span>23<span class="token punctuation">.</span>4 <span class="token operator">--</span>proxy=127<span class="token punctuation">.</span>0<span class="token punctuation">.</span>0<span class="token punctuation">.</span>1:10809 <span class="token comment" spellcheck="true"># gluon</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="powershell">conda create -n gluon python=3.6 cudatoolkit=10.2 mkl ; conda activate gluon ; pip install mxnet-cu102mkl==1.6.0 -f https://dist.mxnet.io/python d2lzh==1.0.0 jupyter==1.0.0 matplotlib==2.2.2 pandas==0.23.4  d2lzh==1.0.0 jupyter==1.0.0 matplotlib==2.2.2 pandas==0.23.4 --proxy=127.0.0.1:10809 # gluon</code></pre>
 <h2 id="php环境"><a href="#php环境" class="headerlink" title="php环境"></a>php环境</h2><h3 id="apache"><a href="#apache" class="headerlink" title="apache"></a>apache</h3><p>Path: <code>D:\scoop\apps\apache\2.4.43\conf\httpd.conf</code></p>
 <ul>
 <li><p>将<code>DocumentRoot</code>字段对应文件夹创建快捷方式到<code>Documents</code></p>
 </li>
 <li><p>文件末尾添加php配置(路径依据个人情况)</p>
-<pre class="line-numbers language-txt"><code class="language-txt">  # php7 support
-  LoadModule php7_module "D:/scoop/apps/php/7.4.9/php7apache2_4.dll"
+<pre><code class="txt">  # php7 support
+  LoadModule php7_module &quot;D:/scoop/apps/php/7.4.9/php7apache2_4.dll&quot;
   AddHandler application/x-httpd-php .php 
 
   # configure thepath to php.ini 
-  PHPIniDir "D:/scoop/apps/php/7.4.9"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  PHPIniDir &quot;D:/scoop/apps/php/7.4.9&quot;</code></pre>
 </li>
 <li><p>修改<code>&lt;IfModule dir_module&gt;</code>字段，添加<code>index.php</code> <code>index.htm</code></p>
 </li>
 <li><p>安装apache为windows服务<code>sudo httpd -k install</code></p>
 <h3 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h3></li>
 <li><p>在mysql根目录创建配置文件<code>my.ini</code>,写入以下内容：</p>
-<pre class="line-numbers language-txt"><code class="language-txt">  [mysqld]
+<pre><code class="txt">  [mysqld]
   datadir=E:/MySQL_data
   [client]
   user=root
@@ -746,13 +745,13 @@ git config <span class="token operator">--</span>global http<span class="token p
   port = 3306
   max_connections=200
   character-set-server=utf8
-  default-storage-engine=INNODB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  default-storage-engine=INNODB</code></pre>
 </li>
 <li><p>启动mysql<code>mysqlstart</code>后执行：</p>
-<pre class="line-numbers language-powershell"><code class="language-powershell">  mysqld <span class="token operator">--</span>initialize <span class="token operator">--</span>user=mysql <span class="token operator">--</span>console<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="powershell">  mysqld --initialize --user=mysql --console</code></pre>
 <p>  记住初始化的密码，用来登陆root用户</p>
-<pre class="line-numbers language-powershell"><code class="language-powershell">  sudo mysqld <span class="token operator">-</span>install <span class="token punctuation">;</span> sudo net <span class="token function">start</span> MySQL <span class="token punctuation">;</span> mysql <span class="token operator">-</span>u root <span class="token operator">-</span>p <span class="token comment" spellcheck="true"># 输入之前生成的密码</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-powershell"><code class="language-powershell">  ALTER USER root@localhost IDENTIFIED  BY <span class="token string">'root'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true"># 修改密码为root</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="powershell">  sudo mysqld -install ; sudo net start MySQL ; mysql -u root -p # 输入之前生成的密码</code></pre>
+<pre><code class="powershell">  ALTER USER root@localhost IDENTIFIED  BY &#39;root&#39;;# 修改密码为root</code></pre>
 <h3 id="php"><a href="#php" class="headerlink" title="php"></a>php</h3><p>复制php根目录的<code>php.ini-development</code>文件为<code>php.ini</code>,并修改：</p>
 </li>
 <li><p><code>; extension_dir = &quot;ext&quot;</code>为<code>extension_dir = &quot;D:/scoop/apps/php/7.4.9/ext&quot;</code></p>
@@ -760,7 +759,7 @@ git config <span class="token operator">--</span>global http<span class="token p
 <li><p><code>;date.timezone =</code>为<code>date.timezone = Asia/Shanghai</code></p>
 </li>
 <li><p>去掉  </p>
-<pre class="line-numbers language-txt"><code class="language-txt">  ;extension=php_curl.dll
+<pre><code class="txt">  ;extension=php_curl.dll
 
   ;extension=php_gd2.dll
 
@@ -768,25 +767,25 @@ git config <span class="token operator">--</span>global http<span class="token p
 
   ;extension=php_mysql.dll
 
-  ;extension=php_xmlrpc.dll<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  ;extension=php_xmlrpc.dll</code></pre>
 <p>前面的注释，开启相应的库</p>
 <h3 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h3><p>php</p>
-<pre class="line-numbers language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
-<span class="token function">phpinfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token delimiter">?></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre><code class="php">&lt;?php
+phpinfo();
+?&gt;</code></pre>
 <p>mysql</p>
-<pre class="line-numbers language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
-<span class="token variable">$servername</span> <span class="token operator">=</span> <span class="token string">"localhost"</span><span class="token punctuation">;</span>
-<span class="token variable">$username</span> <span class="token operator">=</span> <span class="token string">"root"</span><span class="token punctuation">;</span>
-<span class="token variable">$password</span> <span class="token operator">=</span> <span class="token string">"root"</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 创建连接</span>
-<span class="token variable">$conn</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">mysqli</span><span class="token punctuation">(</span><span class="token variable">$servername</span><span class="token punctuation">,</span> <span class="token variable">$username</span><span class="token punctuation">,</span> <span class="token variable">$password</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 检测连接</span>
-<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$conn</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">connect_error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token string">"连接失败: "</span> <span class="token punctuation">.</span> <span class="token variable">$conn</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">connect_error</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span> 
-<span class="token keyword">echo</span> <span class="token string">"连接成功"</span><span class="token punctuation">;</span>
-<span class="token delimiter">?></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="php">&lt;?php
+$servername = &quot;localhost&quot;;
+$username = &quot;root&quot;;
+$password = &quot;root&quot;;
+// 创建连接
+$conn = new mysqli($servername, $username, $password);
+// 检测连接
+if ($conn-&gt;connect_error) {
+  die(&quot;连接失败: &quot; . $conn-&gt;connect_error);
+} 
+echo &quot;连接成功&quot;;
+?&gt;</code></pre>
 </li>
 </ul>
 

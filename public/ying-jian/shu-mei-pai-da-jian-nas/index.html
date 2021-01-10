@@ -29,8 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-material-light.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 
 <body>
@@ -550,14 +549,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-30
+                    2020-12-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    963
+                    967
                 </div>
                 
 
@@ -589,88 +588,88 @@
 <li><p>在终端用df命令查看所有磁盘<br><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E6%9F%A5%E7%9C%8B%E7%A3%81%E7%9B%98.png" alt=""><br>注意绿线画出来的，是我们sd卡的路径<code>/dev/disk2s1</code>记住,后面要用</p>
 </li>
 <li><p>卸载磁盘，并写入镜像<br>卸载磁盘：</p>
-<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> diskutil <span class="token function">umount</span> /dev/disk2s1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="bash"> sudo diskutil umount /dev/disk2s1</code></pre>
 <p> 出现以下提示说明操作成功<br><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E5%8D%B8%E8%BD%BD%E7%A3%81%E7%9B%98%E6%88%90%E5%8A%9F.png" alt=""><br>写入镜像：<em>将if后的path参数换成你的镜像地址</em></p>
-<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> <span class="token function">dd</span> bs<span class="token operator">=</span>1m if<span class="token operator">=</span>/Users/rainbow/Downloads/2020-02-13-raspbian-buster-lite.img of<span class="token operator">=</span>/dev/rdisk2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="bash"> sudo dd bs=1m if=/Users/rainbow/Downloads/2020-02-13-raspbian-buster-lite.img of=/dev/rdisk2</code></pre>
 <p> 速度较慢，耐心等待直到出现以下提示，操作成功<br> <img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%83%A7%E5%BD%95%E6%88%90%E5%8A%9F.png" alt=""></p>
 </li>
 <li><p>ssh与wifi<br>打开boot盘（刚才刻录好的sd卡）到finder，在mac桌面目录下新建ssh空文件和wifi配置文件wpa_supplicant.conf，然后移动到boot盘</p>
-<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">cd</span> Desktop <span class="token operator">&amp;&amp;</span> <span class="token function">touch</span> <span class="token function">ssh</span> <span class="token operator">&amp;&amp;</span> <span class="token function">vi</span> wpa_supplicant.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="bash"> cd Desktop &amp;&amp; touch ssh &amp;&amp; vi wpa_supplicant.conf</code></pre>
 <p> 在wpa_supplicant.conf中写入：</p>
-<pre class="line-numbers language-bash"><code class="language-bash"> country<span class="token operator">=</span>CN
- ctrl_interface<span class="token operator">=</span>DIR<span class="token operator">=</span>/var/run/wpa_supplicant GROUP<span class="token operator">=</span>netdev
- update_config<span class="token operator">=</span>1
+<pre><code class="bash"> country=CN
+ ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+ update_config=1
 
- network<span class="token operator">=</span><span class="token punctuation">{</span>
- ssid<span class="token operator">=</span><span class="token string">"WiFi-A"</span>
- psk<span class="token operator">=</span><span class="token string">"12345678"</span>
- key_mgmt<span class="token operator">=</span>WPA-PSK
- priority<span class="token operator">=</span>1
- <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+ network={
+ ssid=&quot;WiFi-A&quot;
+ psk=&quot;12345678&quot;
+ key_mgmt=WPA-PSK
+ priority=1
+ }</code></pre>
 <p> 参数说明：<br> <strong>ssid: wifi名称</strong><br> <strong>psk: wifi密码</strong><br> <strong>key_mgmt: wifi安全等级</strong><br> <strong>priority: 连接优先级，越大优先级越高</strong></p>
 </li>
 <li><p>保存，推出boot盘，拔掉sd卡插入树莓派，开机</p>
 </li>
 <li><p>连接到树莓派<br>树莓派默认用户名是<code>pi</code>,密码是<code>raspberry</code>，在你的wifi控制台查看树莓派的ip地址，终端输入</p>
-<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">ssh</span> pi@your_ip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="bash"> ssh pi@your_ip</code></pre>
 <p> 来连接树莓派，信任该设备：<code>y</code>，输入密码： <code>raspberry</code></p>
 </li>
 </ol>
 <h2 id="挂载u盘"><a href="#挂载u盘" class="headerlink" title="挂载u盘"></a>挂载u盘</h2><ol>
-<li>插上u盘<br>树莓派的u盘必须挂载才可以使用，所以我们先查看设备路径<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> <span class="token function">fdisk</span> -l<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<li>插上u盘<br>树莓派的u盘必须挂载才可以使用，所以我们先查看设备路径<pre><code class="bash"> sudo fdisk -l</code></pre>
  <img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/20200417004201.png" alt=""><br> <code>/dev/sda</code>为我的U盘路径</li>
-<li>格式化U盘为ext4<br>安装ntfs-3g<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ntfs-3g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
- 格式化<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> mkfs.ext4 /dev/sda<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<li>格式化U盘为ext4<br>安装ntfs-3g<pre><code class="bash"> sudo apt-get install ntfs-3g</code></pre>
+ 格式化<pre><code class="bash"> sudo mkfs.ext4 /dev/sda</code></pre>
 </li>
-<li>挂载<br>新建目录<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> <span class="token function">mkdir</span> /home/share<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
- 将U盘挂载到该目录<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> <span class="token function">mount</span> /dev/sda /home/share<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
- 为用户pi增加该目录的权限<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> <span class="token function">mount</span> -o uid<span class="token operator">=</span>pi,gid<span class="token operator">=</span>pi /dev/sda /home/share<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<li>挂载<br>新建目录<pre><code class="bash"> sudo mkdir /home/share</code></pre>
+ 将U盘挂载到该目录<pre><code class="bash"> sudo mount /dev/sda /home/share</code></pre>
+ 为用户pi增加该目录的权限<pre><code class="bash"> sudo mount -o uid=pi,gid=pi /dev/sda /home/share</code></pre>
 </li>
-<li>开机自动挂载u盘<br>查看U盘的uuid<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> blkid<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
- 编辑 sudo nano /etc/fstab 文件，在末尾加入以下内容<pre class="line-numbers language-bash"><code class="language-bash"> UUID<span class="token operator">=</span>994a070a-31c8-4c70-9662-0db1a5c1cd5f     /home/share   ext4  defaults   0   2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<li>开机自动挂载u盘<br>查看U盘的uuid<pre><code class="bash"> sudo blkid</code></pre>
+ 编辑 sudo nano /etc/fstab 文件，在末尾加入以下内容<pre><code class="bash"> UUID=994a070a-31c8-4c70-9662-0db1a5c1cd5f     /home/share   ext4  defaults   0   2</code></pre>
 </li>
 </ol>
 <h2 id="安装samba"><a href="#安装samba" class="headerlink" title="安装samba"></a>安装samba</h2><ol>
 <li><p>换源<br>备份</p>
-<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> <span class="token function">cp</span> /etc/apt/sources.list /etc/apt/sources.list.bak
- <span class="token function">sudo</span> <span class="token function">cp</span> /etc/apt/sources.list.d/raspi.list /etc/apt/sources.list.d/raspi.list.bak<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code class="bash"> sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+ sudo cp /etc/apt/sources.list.d/raspi.list /etc/apt/sources.list.d/raspi.list.bak</code></pre>
 <p> 清华源<br> 软件：</p>
-<pre class="line-numbers language-bash"><code class="language-bash"> deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi
- deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> <span class="token function">nano</span> /etc/apt/sources.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="bash"> deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi
+ deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi</code></pre>
+<pre><code class="bash"> sudo nano /etc/apt/sources.list</code></pre>
 <p> <img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/20200417002453.png" alt=""><br> <em>Ctrl+o Enter Ctrl+x 保存退出</em><br> 系统：</p>
-<pre class="line-numbers language-bash"><code class="language-bash"> deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
- deb-src http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> <span class="token function">nano</span> /etc/apt/sources.list.d/raspi.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="bash"> deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
+ deb-src http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui</code></pre>
+<pre><code class="bash"> sudo nano /etc/apt/sources.list.d/raspi.list</code></pre>
 <p> <img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8D%A2%E6%BA%902.png" alt=""><br> <em>同上</em><br> 更新源</p>
-<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> apt update
- <span class="token function">sudo</span> apt upgrade<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code class="bash"> sudo apt update
+ sudo apt upgrade</code></pre>
 </li>
 <li><p>安装samba<br>安装</p>
-<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> samba samba-common-bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="bash"> sudo apt-get install samba samba-common-bin</code></pre>
 <p> <em>询问是否设为DHCP：NO</em><br> 配置samba</p>
-<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> <span class="token function">nano</span> /etc/samba/smb.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="bash"> sudo nano /etc/samba/smb.conf</code></pre>
 <p> 在末尾加入如下内容</p>
-<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token comment" spellcheck="true"># 分享名称</span>
- <span class="token punctuation">[</span>share<span class="token punctuation">]</span>
-     <span class="token comment" spellcheck="true"># 说明信息</span>
-     comment <span class="token operator">=</span> NAS Storage
-     <span class="token comment" spellcheck="true"># 共享文件的路径</span>
-     path <span class="token operator">=</span> /home/share
-     <span class="token comment" spellcheck="true"># 可被其他人看到资源名称（非内容）</span>
-     browseable <span class="token operator">=</span> <span class="token function">yes</span>
-     <span class="token comment" spellcheck="true"># 可写</span>
-     writable <span class="token operator">=</span> <span class="token function">yes</span>
-     <span class="token comment" spellcheck="true"># 新建文件的权限为 664</span>
-     create mask <span class="token operator">=</span> 0664
-     <span class="token comment" spellcheck="true"># 新建目录的权限为 775</span>
-     directory mask <span class="token operator">=</span> 0775<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="bash"> # 分享名称
+ [share]
+     # 说明信息
+     comment = NAS Storage
+     # 共享文件的路径
+     path = /home/share
+     # 可被其他人看到资源名称（非内容）
+     browseable = yes
+     # 可写
+     writable = yes
+     # 新建文件的权限为 664
+     create mask = 0664
+     # 新建目录的权限为 775
+     directory mask = 0775</code></pre>
 <p> 为samba添加用户，必须是linux系统已经存在的用户，比如<code>pi</code></p>
-<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> smbpasswd -a pi<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="bash"> sudo smbpasswd -a pi</code></pre>
 <p> 启动samba</p>
-<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">sudo</span> /etc/init.d/smbd restart
+<pre><code class="bash"> sudo /etc/init.d/smbd restart
 
- <span class="token function">sudo</span> /etc/init.d/nmbd restart<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+ sudo /etc/init.d/nmbd restart</code></pre>
 <p> 设置开机启动samba<br> 编辑/etc/rc.local,将<code>sudo /etc/init.d/smbd restart</code> <code>sudo /etc/init.d/nmbd restart</code>加入到<code>exit 0</code>之前</p>
 </li>
 </ol>
