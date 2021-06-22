@@ -5,4 +5,6 @@ type: "movies"
 layout: "movies"
 ---
 
-{% dplayer "url=http://lc-BsmOQFOH.cn-n1.lcfile.com/6bd7e28bf7511860b389.mp4/1.mp4" "type:flv""theme:#FADFA3" "hotkey=true" "title=math" height=50 %}
+{% dplayer "url=https://leancloudfile.rainbowtp.top/6bd7e28bf7511860b389.mp4/1.mp4" "type:flv""theme:#FADFA3" "hotkey=true" "title=math" height=20%}
+
+            

@@ -179,6 +179,8 @@ scoop bucket add extras ; scoop bucket add nonportable ; scoop bucket add Rainbo
     ```powershell
     "Import-Module oh-my-posh`nSet-Theme Sorin`nFunction apache_start(){`n`tsudo httpd -k start`n}`nFunction apache_stop(){`n`tsudo httpd -k stop`n}`nFunction mysql_start(){`n`tsudo net start mysql`n}`nFunction mysql_stop(){`n`tsudo net stop mysql`n}`n`nSet-Alias apache apache_start`nSet-Alias apachestop apache_stop`nSet-Alias mysqlstart mysql_start`nSet-Alias mysqlstop mysql_stop" >> $profile
     ```
+
+
 ### vscode
 
 安装插件`Settings Sync`来同步插件配置
@@ -196,6 +198,7 @@ scoop bucket add extras ; scoop bucket add nonportable ; scoop bucket add Rainbo
     ```txt
     DejaVu Sans Mono for Powerline
     ```
+
 ### utools
 
 全局快捷键：Alt+Space

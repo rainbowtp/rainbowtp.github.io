@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="树莓派搭建nas, MxNet | kali | DL | ML">
+    <meta name="keywords" content="树莓派搭建nas, Rainbow">
     <meta name="description" content="MxNet | kali | DL | ML">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -29,7 +29,10 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Rainbow" type="application/atom+xml">
+</head>
+
+
 
 
 <body>
@@ -309,7 +312,7 @@
 			
 				<i class="fa-fw fas fa-leaf"></i>
 			
-			放松一下
+			Relax
 			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
             <ul  style="background:  ;" >
@@ -435,8 +438,7 @@
     }
 
     .toc-widget .toc-title {
-        margin: 35px 0 15px 0;
-        padding-left: 17px;
+        padding: 35px 0 15px 17px;
         font-size: 1.5rem;
         font-weight: bold;
         line-height: 1.5rem;
@@ -448,7 +450,7 @@
     }
 
     #toc-content {
-        height: calc(100vh - 250px);
+        padding-bottom: 30px;
         overflow: auto;
     }
 
@@ -475,16 +477,8 @@
         display: block;
     }
 
-    .toc-fixed .toc-link::before{
-        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
-    }
-
     #toc-content .is-active-link {
         color: #42b983;
-    }
-
-    #toc-content .is-active-link::before {
-        background-color: #42b983;
     }
 
     #floating-toc-btn {
@@ -547,16 +541,11 @@
                 
 
                 
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-24
-                </div>
-                
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    967
+                    965
                 </div>
                 
 
@@ -571,6 +560,14 @@
             </div>
         </div>
         <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="树莓派搭建nas"><a href="#树莓派搭建nas" class="headerlink" title="树莓派搭建nas"></a>树莓派搭建nas</h1><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul>
@@ -581,101 +578,88 @@
 </ul>
 <h2 id="实现思路及效果"><a href="#实现思路及效果" class="headerlink" title="实现思路及效果"></a>实现思路及效果</h2><p>利用samba搭建nas，u盘作为交换磁盘<br>最终传输速率约20mb/s</p>
 <h2 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h2><ol>
-<li><p>在<a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank" rel="noopener">树莓派官网</a>下载最新版的系统并解压</p>
+<li><p>在<a target="_blank" rel="noopener" href="https://www.raspberrypi.org/downloads/raspbian/">树莓派官网</a>下载最新版的系统并解压</p>
 </li>
-<li><p>下载官方推荐用于格式化sd卡的软件<a href="https://www.sdcard.org/downloads/formatter/eula_mac/SDCardFormatterv5_Mac.zip" target="_blank" rel="noopener">SD Memory Card Formatter</a>并安装，格式化sd卡<br><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E6%A0%BC%E5%BC%8F%E5%8C%96sd.png" alt=""></p>
+<li><p>下载官方推荐用于格式化sd卡的软件<a target="_blank" rel="noopener" href="https://www.sdcard.org/downloads/formatter/eula_mac/SDCardFormatterv5_Mac.zip">SD Memory Card Formatter</a>并安装，格式化sd卡<br><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E6%A0%BC%E5%BC%8F%E5%8C%96sd.png"></p>
 </li>
-<li><p>在终端用df命令查看所有磁盘<br><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E6%9F%A5%E7%9C%8B%E7%A3%81%E7%9B%98.png" alt=""><br>注意绿线画出来的，是我们sd卡的路径<code>/dev/disk2s1</code>记住,后面要用</p>
+<li><p>在终端用df命令查看所有磁盘<br><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E6%9F%A5%E7%9C%8B%E7%A3%81%E7%9B%98.png"><br>注意绿线画出来的，是我们sd卡的路径<code>/dev/disk2s1</code>记住,后面要用</p>
 </li>
 <li><p>卸载磁盘，并写入镜像<br>卸载磁盘：</p>
-<pre><code class="bash"> sudo diskutil umount /dev/disk2s1</code></pre>
-<p> 出现以下提示说明操作成功<br><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E5%8D%B8%E8%BD%BD%E7%A3%81%E7%9B%98%E6%88%90%E5%8A%9F.png" alt=""><br>写入镜像：<em>将if后的path参数换成你的镜像地址</em></p>
-<pre><code class="bash"> sudo dd bs=1m if=/Users/rainbow/Downloads/2020-02-13-raspbian-buster-lite.img of=/dev/rdisk2</code></pre>
-<p> 速度较慢，耐心等待直到出现以下提示，操作成功<br> <img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%83%A7%E5%BD%95%E6%88%90%E5%8A%9F.png" alt=""></p>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> diskutil <span class="token function">umount</span> /dev/disk2s1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> 出现以下提示说明操作成功<br><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E5%8D%B8%E8%BD%BD%E7%A3%81%E7%9B%98%E6%88%90%E5%8A%9F.png"><br>写入镜像：<em>将if后的path参数换成你的镜像地址</em></p>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">dd</span> <span class="token assign-left variable">bs</span><span class="token operator">=</span>1m <span class="token assign-left variable">if</span><span class="token operator">=</span>/Users/rainbow/Downloads/2020-02-13-raspbian-buster-lite.img <span class="token assign-left variable">of</span><span class="token operator">=</span>/dev/rdisk2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> 速度较慢，耐心等待直到出现以下提示，操作成功<br> <img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%83%A7%E5%BD%95%E6%88%90%E5%8A%9F.png"></p>
 </li>
 <li><p>ssh与wifi<br>打开boot盘（刚才刻录好的sd卡）到finder，在mac桌面目录下新建ssh空文件和wifi配置文件wpa_supplicant.conf，然后移动到boot盘</p>
-<pre><code class="bash"> cd Desktop &amp;&amp; touch ssh &amp;&amp; vi wpa_supplicant.conf</code></pre>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Desktop <span class="token operator">&amp;&amp;</span> <span class="token function">touch</span> <span class="token function">ssh</span> <span class="token operator">&amp;&amp;</span> <span class="token function">vi</span> wpa_supplicant.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p> 在wpa_supplicant.conf中写入：</p>
-<pre><code class="bash"> country=CN
- ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
- update_config=1
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">country</span><span class="token operator">=</span>CN
+<span class="token assign-left variable">ctrl_interface</span><span class="token operator">=</span>DIR<span class="token operator">=</span>/var/run/wpa_supplicant <span class="token assign-left variable">GROUP</span><span class="token operator">=</span>netdev
+<span class="token assign-left variable">update_config</span><span class="token operator">=</span><span class="token number">1</span>
 
- network={
- ssid=&quot;WiFi-A&quot;
- psk=&quot;12345678&quot;
- key_mgmt=WPA-PSK
- priority=1
- }</code></pre>
+<span class="token assign-left variable">network</span><span class="token operator">=</span><span class="token punctuation">&#123;</span>
+<span class="token assign-left variable">ssid</span><span class="token operator">=</span><span class="token string">"WiFi-A"</span>
+<span class="token assign-left variable">psk</span><span class="token operator">=</span><span class="token string">"12345678"</span>
+<span class="token assign-left variable">key_mgmt</span><span class="token operator">=</span>WPA-PSK
+<span class="token assign-left variable">priority</span><span class="token operator">=</span><span class="token number">1</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p> 参数说明：<br> <strong>ssid: wifi名称</strong><br> <strong>psk: wifi密码</strong><br> <strong>key_mgmt: wifi安全等级</strong><br> <strong>priority: 连接优先级，越大优先级越高</strong></p>
 </li>
 <li><p>保存，推出boot盘，拔掉sd卡插入树莓派，开机</p>
 </li>
 <li><p>连接到树莓派<br>树莓派默认用户名是<code>pi</code>,密码是<code>raspberry</code>，在你的wifi控制台查看树莓派的ip地址，终端输入</p>
-<pre><code class="bash"> ssh pi@your_ip</code></pre>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> pi@your_ip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p> 来连接树莓派，信任该设备：<code>y</code>，输入密码： <code>raspberry</code></p>
 </li>
 </ol>
 <h2 id="挂载u盘"><a href="#挂载u盘" class="headerlink" title="挂载u盘"></a>挂载u盘</h2><ol>
-<li>插上u盘<br>树莓派的u盘必须挂载才可以使用，所以我们先查看设备路径<pre><code class="bash"> sudo fdisk -l</code></pre>
- <img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/20200417004201.png" alt=""><br> <code>/dev/sda</code>为我的U盘路径</li>
-<li>格式化U盘为ext4<br>安装ntfs-3g<pre><code class="bash"> sudo apt-get install ntfs-3g</code></pre>
- 格式化<pre><code class="bash"> sudo mkfs.ext4 /dev/sda</code></pre>
-</li>
-<li>挂载<br>新建目录<pre><code class="bash"> sudo mkdir /home/share</code></pre>
- 将U盘挂载到该目录<pre><code class="bash"> sudo mount /dev/sda /home/share</code></pre>
- 为用户pi增加该目录的权限<pre><code class="bash"> sudo mount -o uid=pi,gid=pi /dev/sda /home/share</code></pre>
-</li>
-<li>开机自动挂载u盘<br>查看U盘的uuid<pre><code class="bash"> sudo blkid</code></pre>
- 编辑 sudo nano /etc/fstab 文件，在末尾加入以下内容<pre><code class="bash"> UUID=994a070a-31c8-4c70-9662-0db1a5c1cd5f     /home/share   ext4  defaults   0   2</code></pre>
-</li>
+<li>插上u盘<br>树莓派的u盘必须挂载才可以使用，所以我们先查看设备路径 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">fdisk</span> -l<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ <img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/20200417004201.png"><br> <code>/dev/sda</code>为我的U盘路径</li>
+<li>格式化U盘为ext4<br>安装ntfs-3g <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ntfs-3g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ 格式化 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> mkfs.ext4 /dev/sda<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>挂载<br>新建目录 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">mkdir</span> /home/share<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ 将U盘挂载到该目录 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">mount</span> /dev/sda /home/share<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ 为用户pi增加该目录的权限 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">mount</span> -o <span class="token assign-left variable">uid</span><span class="token operator">=</span>pi,gid<span class="token operator">=</span>pi /dev/sda /home/share<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>开机自动挂载u盘<br>查看U盘的uuid <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> blkid<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ 编辑 sudo nano /etc/fstab 文件，在末尾加入以下内容 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">UUID</span><span class="token operator">=</span>994a070a-31c8-4c70-9662-0db1a5c1cd5f     /home/share   ext4  defaults   <span class="token number">0</span>   <span class="token number">2</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ol>
 <h2 id="安装samba"><a href="#安装samba" class="headerlink" title="安装samba"></a>安装samba</h2><ol>
-<li><p>换源<br>备份</p>
-<pre><code class="bash"> sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
- sudo cp /etc/apt/sources.list.d/raspi.list /etc/apt/sources.list.d/raspi.list.bak</code></pre>
-<p> 清华源<br> 软件：</p>
-<pre><code class="bash"> deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi
- deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi</code></pre>
-<pre><code class="bash"> sudo nano /etc/apt/sources.list</code></pre>
-<p> <img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/20200417002453.png" alt=""><br> <em>Ctrl+o Enter Ctrl+x 保存退出</em><br> 系统：</p>
-<pre><code class="bash"> deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
- deb-src http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui</code></pre>
-<pre><code class="bash"> sudo nano /etc/apt/sources.list.d/raspi.list</code></pre>
-<p> <img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8D%A2%E6%BA%902.png" alt=""><br> <em>同上</em><br> 更新源</p>
-<pre><code class="bash"> sudo apt update
- sudo apt upgrade</code></pre>
-</li>
-<li><p>安装samba<br>安装</p>
-<pre><code class="bash"> sudo apt-get install samba samba-common-bin</code></pre>
-<p> <em>询问是否设为DHCP：NO</em><br> 配置samba</p>
-<pre><code class="bash"> sudo nano /etc/samba/smb.conf</code></pre>
-<p> 在末尾加入如下内容</p>
-<pre><code class="bash"> # 分享名称
- [share]
-     # 说明信息
-     comment = NAS Storage
-     # 共享文件的路径
-     path = /home/share
-     # 可被其他人看到资源名称（非内容）
-     browseable = yes
-     # 可写
-     writable = yes
-     # 新建文件的权限为 664
-     create mask = 0664
-     # 新建目录的权限为 775
-     directory mask = 0775</code></pre>
-<p> 为samba添加用户，必须是linux系统已经存在的用户，比如<code>pi</code></p>
-<pre><code class="bash"> sudo smbpasswd -a pi</code></pre>
-<p> 启动samba</p>
-<pre><code class="bash"> sudo /etc/init.d/smbd restart
+<li>换源<br>备份 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">cp</span> /etc/apt/sources.list /etc/apt/sources.list.bak
+<span class="token function">sudo</span> <span class="token function">cp</span> /etc/apt/sources.list.d/raspi.list /etc/apt/sources.list.d/raspi.list.bak<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+ 清华源<br> 软件： <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi
+deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">nano</span> /etc/apt/sources.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ <img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/20200417002453.png"><br> <em>Ctrl+o Enter Ctrl+x 保存退出</em><br> 系统： <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
+deb-src http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">nano</span> /etc/apt/sources.list.d/raspi.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ <img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8D%A2%E6%BA%902.png"><br> <em>同上</em><br> 更新源 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update
+<span class="token function">sudo</span> <span class="token function">apt</span> upgrade<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>安装samba<br>安装 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> samba samba-common-bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ <em>询问是否设为DHCP：NO</em><br> 配置samba <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">nano</span> /etc/samba/smb.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ 在末尾加入如下内容 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 分享名称</span>
+<span class="token punctuation">[</span>share<span class="token punctuation">]</span>
+    <span class="token comment"># 说明信息</span>
+    comment <span class="token operator">=</span> NAS Storage
+    <span class="token comment"># 共享文件的路径</span>
+    path <span class="token operator">=</span> /home/share
+    <span class="token comment"># 可被其他人看到资源名称（非内容）</span>
+    browseable <span class="token operator">=</span> <span class="token function">yes</span>
+    <span class="token comment"># 可写</span>
+    writable <span class="token operator">=</span> <span class="token function">yes</span>
+    <span class="token comment"># 新建文件的权限为 664</span>
+    create mask <span class="token operator">=</span> 0664
+    <span class="token comment"># 新建目录的权限为 775</span>
+    directory mask <span class="token operator">=</span> 0775<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+ 为samba添加用户，必须是linux系统已经存在的用户，比如<code>pi</code> <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> smbpasswd -a pi<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ 启动samba <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> /etc/init.d/smbd restart
 
- sudo /etc/init.d/nmbd restart</code></pre>
-<p> 设置开机启动samba<br> 编辑/etc/rc.local,将<code>sudo /etc/init.d/smbd restart</code> <code>sudo /etc/init.d/nmbd restart</code>加入到<code>exit 0</code>之前</p>
-</li>
+<span class="token function">sudo</span> /etc/init.d/nmbd restart<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+ 设置开机启动samba<br> 编辑/etc/rc.local,将<code>sudo /etc/init.d/smbd restart</code> <code>sudo /etc/init.d/nmbd restart</code>加入到<code>exit 0</code>之前</li>
 </ol>
 <h2 id="连线"><a href="#连线" class="headerlink" title="连线"></a>连线</h2><p>大多数情况下nas传输速度受网络情况影响较大<br>将树莓派与路由器有线连接可以得到显著的改善</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>打开finder–&gt;前往–&gt;连接服务器<br><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/mac.png" alt=""><br>finder偏好设置里打开边栏显示 连接到的服务器<br><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/finder%E8%BE%B9%E6%A0%8F.png" alt=""></p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>打开finder–&gt;前往–&gt;连接服务器<br><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/mac.png"><br>finder偏好设置里打开边栏显示 连接到的服务器<br><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/finder%E8%BE%B9%E6%A0%8F.png"></p>
 
+                
             </div>
             <hr/>
 
@@ -690,7 +674,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://rainbowtp.top" rel="external nofollow noreferrer">rainbow</a>
+                    <a href="/about" rel="external nofollow noreferrer">rainbow</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -713,7 +697,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://rainbowtp.top" target="_blank">rainbow</a>
+                    <a href="/about" target="_blank">rainbow</a>
                     !
                 </span>
             </div>
@@ -750,7 +734,7 @@
 <div id="article-share">
 
     
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
     <script src="/libs/share/js/social-share.min.js"></script>
     
 
@@ -1161,6 +1145,13 @@
     });
 </script>
 
+<!--酷Q推送-->
+
+
+    
+
+    
+
     
 
     
@@ -1294,16 +1285,9 @@
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
-<!-- 代码块折行 -->
-
-<style type="text/css">
-code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
-</style>
-
-
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget">
+        <div class="toc-widget card" style="background-color: white;">
             <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
@@ -1404,32 +1388,42 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
     <footer class="page-footer bg-color">
     
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
             <span id="year">2019</span>
-            <a href="https://rainbowtp.top" target="_blank">rainbow</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <a href="/about" target="_blank">Rainbow</a>
+            <!-- |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> -->
+            <!-- |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a> -->
             <br>
             
             
             
-            
-            
-            
-            
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
+            <!-- 
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
             </span>
             
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+             -->
             <br>
+
+            <!-- 运行天数提醒. -->
             <!--  -->
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div class="col s12 m4 l4 social-link ">
     <a href="https://github.com/rainbowtp" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1456,6 +1450,10 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
 </div>
     </div>
 </footer>
@@ -1475,10 +1473,95 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
     </div>
 </div>
 
-<script src="/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
-    searchFunc("/search.xml", 'searchInput', 'searchResult');
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
 });
 </script>
 
@@ -1527,18 +1610,6 @@ $(function () {
 
     
     
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
-    
-    
-        <script type="text/javascript">
-        //只在桌面版网页启用特效
-        var windowWidth = $(window).width();
-        if (windowWidth > 768) {
-            document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
-        }
-        </script>
-    
 
     
 
@@ -1563,6 +1634,8 @@ $(function () {
     </script>
     
 
+    <!--腾讯兔小巢-->
+    
     
 
     
@@ -1575,6 +1648,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</body>
 
 </html>

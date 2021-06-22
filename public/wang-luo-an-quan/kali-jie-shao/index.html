@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="kali-介绍, MxNet | kali | DL | ML">
+    <meta name="keywords" content="kali-介绍, Rainbow">
     <meta name="description" content="MxNet | kali | DL | ML">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -29,7 +29,10 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Rainbow" type="application/atom+xml">
+</head>
+
+
 
 
 <body>
@@ -309,7 +312,7 @@
 			
 				<i class="fa-fw fas fa-leaf"></i>
 			
-			放松一下
+			Relax
 			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
             <ul  style="background:  ;" >
@@ -435,8 +438,7 @@
     }
 
     .toc-widget .toc-title {
-        margin: 35px 0 15px 0;
-        padding-left: 17px;
+        padding: 35px 0 15px 17px;
         font-size: 1.5rem;
         font-weight: bold;
         line-height: 1.5rem;
@@ -448,7 +450,7 @@
     }
 
     #toc-content {
-        height: calc(100vh - 250px);
+        padding-bottom: 30px;
         overflow: auto;
     }
 
@@ -475,16 +477,8 @@
         display: block;
     }
 
-    .toc-fixed .toc-link::before{
-        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
-    }
-
     #toc-content .is-active-link {
         color: #42b983;
-    }
-
-    #toc-content .is-active-link::before {
-        background-color: #42b983;
     }
 
     #floating-toc-btn {
@@ -547,11 +541,6 @@
                 
 
                 
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-24
-                </div>
-                
 
                 
                 <div class="info-break-policy">
@@ -571,6 +560,14 @@
             </div>
         </div>
         <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="第一章-介绍"><a href="#第一章-介绍" class="headerlink" title="第一章 介绍"></a>第一章 介绍</h1><h2 id="安全问题的根源"><a href="#安全问题的根源" class="headerlink" title="安全问题的根源"></a>安全问题的根源</h2><ul>
@@ -593,7 +590,7 @@
 <li>法律</li>
 </ul>
 <h2 id="渗透测试标准"><a href="#渗透测试标准" class="headerlink" title="渗透测试标准"></a>渗透测试标准</h2><ul>
-<li>PETS（<a href="http://www.pentest-standard.org）" target="_blank" rel="noopener">http://www.pentest-standard.org）</a></li>
+<li>PETS（<a target="_blank" rel="noopener" href="http://www.pentest-standard.org)/">http://www.pentest-standard.org）</a></li>
 <li>前期交互阶段</li>
 <li>情报收集阶段</li>
 <li>威胁建模阶段</li>
@@ -618,7 +615,7 @@
 <h2 id="KALI"><a href="#KALI" class="headerlink" title="KALI"></a>KALI</h2><ul>
 <li>Kali（kālī，⾳音译为迦梨或迦利，字面意思是“黑色的”）是印度教中一个重<br>  要的女神，她是湿婆神妃帕尔瓦蒂产生的化身，印度神话中最为黑暗和暴虐的<br>  黑色地母。她⽪皮肤黝黑，⻘青面獠⽛牙，额头和湿婆神一样有第三只眼睛，<br>  四只手臂分持武器，戴着蛇和骷髅的项链，⾆舌头上滴着血。有她的传说<br>  总是与杀戮和鲜血相连，史上曾经用过活⼈人献祭，是印度教派中最为隐<br>  晦和神秘的一派。</li>
 <li>迦梨一词也可解释为时间，故中⽂文翻译为时母。在后期的信仰体系中，时母被<br>  认为与时间和变化有关，象征着强大和新生。</li>
-<li>在面对前所未有的强大的阿修罗时陷⼊入困境，这时候她的面孔因为愤怒而<br>  发黑，从她脸上的黑气中诞生了可怕的迦梨。今日印度的都市加尔各答，<br>  名字的意思就是“迦梨的沐浴场”。<br><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/kali.png" alt=""></li>
+<li>在面对前所未有的强大的阿修罗时陷⼊入困境，这时候她的面孔因为愤怒而<br>  发黑，从她脸上的黑气中诞生了可怕的迦梨。今日印度的都市加尔各答，<br>  名字的意思就是“迦梨的沐浴场”。<br><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/kali.png"></li>
 </ul>
 <h2 id="KALI-LINUX-介绍"><a href="#KALI-LINUX-介绍" class="headerlink" title="KALI LINUX 介绍"></a>KALI LINUX 介绍</h2><ul>
 <li>基于Debian的Linux发⾏行版本</li>
@@ -644,6 +641,7 @@
 <li>Kali很强大，但不是全部</li>
 </ul>
 
+                
             </div>
             <hr/>
 
@@ -658,7 +656,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://rainbowtp.top" rel="external nofollow noreferrer">rainbow</a>
+                    <a href="/about" rel="external nofollow noreferrer">rainbow</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -681,7 +679,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://rainbowtp.top" target="_blank">rainbow</a>
+                    <a href="/about" target="_blank">rainbow</a>
                     !
                 </span>
             </div>
@@ -718,7 +716,7 @@
 <div id="article-share">
 
     
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
     <script src="/libs/share/js/social-share.min.js"></script>
     
 
@@ -1129,6 +1127,13 @@
     });
 </script>
 
+<!--酷Q推送-->
+
+
+    
+
+    
+
     
 
     
@@ -1266,16 +1271,9 @@
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
-<!-- 代码块折行 -->
-
-<style type="text/css">
-code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
-</style>
-
-
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget">
+        <div class="toc-widget card" style="background-color: white;">
             <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
@@ -1376,32 +1374,42 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
     <footer class="page-footer bg-color">
     
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
             <span id="year">2019</span>
-            <a href="https://rainbowtp.top" target="_blank">rainbow</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <a href="/about" target="_blank">Rainbow</a>
+            <!-- |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> -->
+            <!-- |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a> -->
             <br>
             
             
             
-            
-            
-            
-            
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
+            <!-- 
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
             </span>
             
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+             -->
             <br>
+
+            <!-- 运行天数提醒. -->
             <!--  -->
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div class="col s12 m4 l4 social-link ">
     <a href="https://github.com/rainbowtp" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1428,6 +1436,10 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
 </div>
     </div>
 </footer>
@@ -1447,10 +1459,95 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
     </div>
 </div>
 
-<script src="/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
-    searchFunc("/search.xml", 'searchInput', 'searchResult');
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
 });
 </script>
 
@@ -1499,18 +1596,6 @@ $(function () {
 
     
     
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
-    
-    
-        <script type="text/javascript">
-        //只在桌面版网页启用特效
-        var windowWidth = $(window).width();
-        if (windowWidth > 768) {
-            document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
-        }
-        </script>
-    
 
     
 
@@ -1535,6 +1620,8 @@ $(function () {
     </script>
     
 
+    <!--腾讯兔小巢-->
+    
     
 
     
@@ -1547,6 +1634,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</body>
 
 </html>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="cracer入门, MxNet | kali | DL | ML">
+    <meta name="keywords" content="cracer入门, Rainbow">
     <meta name="description" content="MxNet | kali | DL | ML">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -29,7 +29,10 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Rainbow" type="application/atom+xml">
+</head>
+
+
 
 
 <body>
@@ -309,7 +312,7 @@
 			
 				<i class="fa-fw fas fa-leaf"></i>
 			
-			放松一下
+			Relax
 			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
             <ul  style="background:  ;" >
@@ -435,8 +438,7 @@
     }
 
     .toc-widget .toc-title {
-        margin: 35px 0 15px 0;
-        padding-left: 17px;
+        padding: 35px 0 15px 17px;
         font-size: 1.5rem;
         font-weight: bold;
         line-height: 1.5rem;
@@ -448,7 +450,7 @@
     }
 
     #toc-content {
-        height: calc(100vh - 250px);
+        padding-bottom: 30px;
         overflow: auto;
     }
 
@@ -475,16 +477,8 @@
         display: block;
     }
 
-    .toc-fixed .toc-link::before{
-        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
-    }
-
     #toc-content .is-active-link {
         color: #42b983;
-    }
-
-    #toc-content .is-active-link::before {
-        background-color: #42b983;
     }
 
     #floating-toc-btn {
@@ -551,11 +545,6 @@
                 
 
                 
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-24
-                </div>
-                
 
                 
                 <div class="info-break-policy">
@@ -575,6 +564,14 @@
             </div>
         </div>
         <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="cracer入门-day-1"><a href="#cracer入门-day-1" class="headerlink" title="cracer入门 day-1"></a>cracer入门 day-1</h1><h2 id="1-知识科普"><a href="#1-知识科普" class="headerlink" title="1.知识科普"></a>1.知识科普</h2><h3 id="黑客"><a href="#黑客" class="headerlink" title="黑客"></a>黑客</h3><p>“黑客”一词是由英语Hacker音译出来的。他们伴随者计算机和网络的发展而产生和成长。</p>
@@ -595,7 +592,7 @@
 </ul>
 <h3 id="骇客"><a href="#骇客" class="headerlink" title="骇客"></a>骇客</h3><p>骇客源自英文Hacker,即闯入计算机系统/软件，后来被称为Craker的一类人。他们从事恶意破解商业软件、恶意入侵别人的网站等事务。</p>
 <p>他们未必有很高的技术，通常用一些简单的攻击手法去达到一些炫耀、恶作剧、搞破坏目的。</p>
-<h3 id="早期代表人物"><a href="#早期代表人物" class="headerlink" title="早期代表人物"></a>早期代表人物</h3><p><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E6%97%A9%E6%9C%9F%E9%AA%87%E5%AE%A2.png" alt=""></p>
+<h3 id="早期代表人物"><a href="#早期代表人物" class="headerlink" title="早期代表人物"></a>早期代表人物</h3><p><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E6%97%A9%E6%9C%9F%E9%AA%87%E5%AE%A2.png"></p>
 <p>写了很多好书 社会工程学最强</p>
 <h3 id="Hacker事件"><a href="#Hacker事件" class="headerlink" title="Hacker事件"></a>Hacker事件</h3><p>天涯论坛被脱裤</p>
 <p>伊朗黑客破坏美国海军</p>
@@ -615,11 +612,14 @@
 <h3 id="Wdbshell"><a href="#Wdbshell" class="headerlink" title="Wdbshell"></a>Wdbshell</h3><p>通过Web入侵的一种脚本工具，可以据此对网站服务进行一定程度的控制。</p>
 <h3 id="漏洞"><a href="#漏洞" class="headerlink" title="漏洞"></a>漏洞</h3><p>硬件、软件、协议等等的可利用安全缺陷，可能被攻击者利用，对数据进行篡改，控制等。</p>
 <h3 id="一句话木马"><a href="#一句话木马" class="headerlink" title="一句话木马"></a>一句话木马</h3><p>通过向服务端提交一句简单的代码，配合本地客户端实现webshell功能的木马。</p>
-<pre><code class="php">&lt;%eval request(&quot;pass&quot;)%&gt;
-  &lt;%execute(request(&quot;pass&quot;))%&gt;
-  request(&quot;pass&quot;)
- # 接收客户端提交的数据，pass为执行命令的参数值。 eval/execute 函数执行客户端命令的内容</code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/php.png" alt=""></p>
+<pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token keyword">eval</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"pass"</span><span class="token punctuation">)</span><span class="token operator">%</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token function">execute</span><span class="token punctuation">(</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"pass"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">%</span><span class="token operator">></span>
+  <span class="token function">request</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"pass"</span><span class="token punctuation">)</span>
+ <span class="token comment"># 接收客户端提交的数据，pass为执行命令的参数值。 eval/execute 函数执行客户端命令的内容</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/php.png"></p>
 <h3 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h3><p>操作做系统低权限的账户将自己提升为管理员权限所使用的的方法。</p>
 <h3 id="后门"><a href="#后门" class="headerlink" title="后门"></a>后门</h3><p>黑客为了对主机进行长期的控制，在机器上种植的一段程序或留下的一个“入口”</p>
 <h3 id="跳板"><a href="#跳板" class="headerlink" title="跳板"></a>跳板</h3><p>使用肉鸡IP来实施攻击其他目标，以便更好地隐藏自己的身份信息。 </p>
@@ -642,7 +642,7 @@
 <p>三个臭皮匠赛过诸葛亮，众人拾柴火焰高</p>
 <h3 id="渗透测试与入侵的最大区别"><a href="#渗透测试与入侵的最大区别" class="headerlink" title="渗透测试与入侵的最大区别"></a>渗透测试与入侵的最大区别</h3><p>渗透测试：更全面地找出服务器的问题，更倾向于保护</p>
 <p>入侵：不择手段地（甚至是具有破坏性的）拿到权限</p>
-<h3 id="渗透测试的一般流程："><a href="#渗透测试的一般流程：" class="headerlink" title="渗透测试的一般流程："></a>渗透测试的一般流程：</h3><p><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B.png" alt=""></p>
+<h3 id="渗透测试的一般流程："><a href="#渗透测试的一般流程：" class="headerlink" title="渗透测试的一般流程："></a>渗透测试的一般流程：</h3><p><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B.png"></p>
 <h4 id="1-明确目标"><a href="#1-明确目标" class="headerlink" title="1.明确目标"></a>1.明确目标</h4><p>确定目标</p>
 <p>确定规则</p>
 <p>确定需求</p>
@@ -685,8 +685,8 @@
 <p>多学习，多看源码</p>
 <p>平时注意搜集0day</p>
 <p>思路很重要</p>
-<h3 id="渗透测试流程"><a href="#渗透测试流程" class="headerlink" title="渗透测试流程"></a>渗透测试流程</h3><p><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/20200421164850.png" alt=""></p>
-<h2 id="4-虚拟机"><a href="#4-虚拟机" class="headerlink" title="4.虚拟机"></a>4.虚拟机</h2><p><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/VM.png" alt=""></p>
+<h3 id="渗透测试流程"><a href="#渗透测试流程" class="headerlink" title="渗透测试流程"></a>渗透测试流程</h3><p><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/20200421164850.png"></p>
+<h2 id="4-虚拟机"><a href="#4-虚拟机" class="headerlink" title="4.虚拟机"></a>4.虚拟机</h2><p><img src="https://cdn.jsdelivr.net/gh/rainbowtp/blog_photo//data/VM.png"></p>
 <h3 id="获取虚拟机"><a href="#获取虚拟机" class="headerlink" title="获取虚拟机"></a>获取虚拟机</h3><p>Vmware</p>
 <h3 id="安装虚拟机"><a href="#安装虚拟机" class="headerlink" title="安装虚拟机"></a>安装虚拟机</h3><p>一直回车</p>
 <h3 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h3><h4 id="windows系统的安装"><a href="#windows系统的安装" class="headerlink" title="windows系统的安装"></a>windows系统的安装</h4><p>个人系统</p>
@@ -701,6 +701,7 @@
 <h3 id="VMWare-Tools-安装"><a href="#VMWare-Tools-安装" class="headerlink" title="VMWare Tools 安装"></a>VMWare Tools 安装</h3><p>windows上安装很简单</p>
 <p>虚拟机——安装VNware Tools会自动弹出一个安装界面，如果没弹出，打开我的电脑——虚拟光驱——setup安装即可，安装一直回车，完了重启</p>
 
+                
             </div>
             <hr/>
 
@@ -715,7 +716,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://rainbowtp.top" rel="external nofollow noreferrer">rainbow</a>
+                    <a href="/about" rel="external nofollow noreferrer">rainbow</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -738,7 +739,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://rainbowtp.top" target="_blank">rainbow</a>
+                    <a href="/about" target="_blank">rainbow</a>
                     !
                 </span>
             </div>
@@ -779,7 +780,7 @@
 <div id="article-share">
 
     
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
     <script src="/libs/share/js/social-share.min.js"></script>
     
 
@@ -1190,6 +1191,13 @@
     });
 </script>
 
+<!--酷Q推送-->
+
+
+    
+
+    
+
     
 
     
@@ -1320,16 +1328,9 @@
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
-<!-- 代码块折行 -->
-
-<style type="text/css">
-code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
-</style>
-
-
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget">
+        <div class="toc-widget card" style="background-color: white;">
             <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
@@ -1430,32 +1431,42 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
     <footer class="page-footer bg-color">
     
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
             <span id="year">2019</span>
-            <a href="https://rainbowtp.top" target="_blank">rainbow</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <a href="/about" target="_blank">Rainbow</a>
+            <!-- |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> -->
+            <!-- |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a> -->
             <br>
             
             
             
-            
-            
-            
-            
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
+            <!-- 
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
             </span>
             
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+             -->
             <br>
+
+            <!-- 运行天数提醒. -->
             <!--  -->
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div class="col s12 m4 l4 social-link ">
     <a href="https://github.com/rainbowtp" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1482,6 +1493,10 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
 </div>
     </div>
 </footer>
@@ -1501,10 +1516,95 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
     </div>
 </div>
 
-<script src="/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
-    searchFunc("/search.xml", 'searchInput', 'searchResult');
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
 });
 </script>
 
@@ -1553,18 +1653,6 @@ $(function () {
 
     
     
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
-    
-    
-        <script type="text/javascript">
-        //只在桌面版网页启用特效
-        var windowWidth = $(window).width();
-        if (windowWidth > 768) {
-            document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
-        }
-        </script>
-    
 
     
 
@@ -1589,6 +1677,8 @@ $(function () {
     </script>
     
 
+    <!--腾讯兔小巢-->
+    
     
 
     
@@ -1601,6 +1691,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</body>
 
 </html>
