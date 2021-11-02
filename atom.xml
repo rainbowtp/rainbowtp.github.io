@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Rainbow</title>
+  
+  <subtitle>rainbow</subtitle>
+  <link href="https://rainbowtp.top/atom.xml" rel="self"/>
+  
+  <link href="https://rainbowtp.top/"/>
+  <updated>2021-11-02T02:48:57.061Z</updated>
+  <id>https://rainbowtp.top/</id>
+  
+  <author>
+    <name>Rainbow</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vscode tensorboard</title>
+    <link href="https://rainbowtp.top/gong-ju/vscode-tensorboard/"/>
+    <id>https://rainbowtp.top/gong-ju/vscode-tensorboard/</id>
+    <published>2021-11-02T02:13:07.000Z</published>
+    <updated>2021-11-02T02:48:57.061Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; vscode内置的tensorboard组件启动时报错:&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-txt&quot; data-language=&quot;txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;启动 TensorBoard</summary>
+        
+      
+    
+    
+    
+    <category term="工具" scheme="https://rainbowtp.top/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="疑难杂症" scheme="https://rainbowtp.top/tags/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>经典算法大全</title>
+    <link href="https://rainbowtp.top/bi-ji/jing-dian-suan-fa-da-quan/"/>
+    <id>https://rainbowtp.top/bi-ji/jing-dian-suan-fa-da-quan/</id>
+    <published>2021-06-22T17:33:22.000Z</published>
+    <updated>2021-11-02T02:31:36.285Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;河内之塔(Towers of Hanoi)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;line-numbers language-c&quot; data-language=&quot;c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://rainbowtp.top/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="算法" scheme="https://rainbowtp.top/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>随笔</title>
+    <link href="https://rainbowtp.top/wen-xue/sui-bi/"/>
+    <id>https://rainbowtp.top/wen-xue/sui-bi/</id>
+    <published>2020-09-14T14:29:31.000Z</published>
+    <updated>2021-06-22T05:56:09.126Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;我不是我,真我是我&lt;/p&gt;
+&lt;p&gt;当麻痹的心再次跳动,我能否承受它的汹涌澎湃,和随之而来的空缺与悲伤&lt;/p&gt;
+&lt;p&gt;回忆是魔鬼,总是嘶吼着要将我拽向深渊,但我已无路可退,也不愿再退&lt;/p&gt;
+&lt;p&gt;听风听雨,看云看雾&lt;/p&gt;
+&lt;p&gt;理性与本能的战争是为了争夺身体的控制权</summary>
+        
+      
+    
+    
+    
+    <category term="文学" scheme="https://rainbowtp.top/categories/%E6%96%87%E5%AD%A6/"/>
+    
+    
+    <category term="随笔" scheme="https://rainbowtp.top/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Win10Config</title>
+    <link href="https://rainbowtp.top/xi-tong/win10config/"/>
+    <id>https://rainbowtp.top/xi-tong/win10config/</id>
+    <published>2020-08-28T06:38:37.000Z</published>
+    <updated>2021-06-22T10:44:22.320Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;win10-config&quot;&gt;&lt;a href=&quot;#win10-config&quot; class=&quot;headerlink&quot; title=&quot;win10 config&quot;&gt;&lt;/a&gt;&lt;center&gt;win10 config&lt;/center&gt;&lt;/h1&gt;&lt;h2 id=&quot;系统&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="系统" scheme="https://rainbowtp.top/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="win10" scheme="https://rainbowtp.top/tags/win10/"/>
+    
+    <category term="scoop" scheme="https://rainbowtp.top/tags/scoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>kali-介绍</title>
+    <link href="https://rainbowtp.top/wang-luo-an-quan/kali-jie-shao/"/>
+    <id>https://rainbowtp.top/wang-luo-an-quan/kali-jie-shao/</id>
+    <published>2020-05-02T11:59:57.000Z</published>
+    <updated>2021-06-22T05:56:09.122Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第一章-介绍&quot;&gt;&lt;a href=&quot;#第一章-介绍&quot; class=&quot;headerlink&quot; title=&quot;第一章 介绍&quot;&gt;&lt;/a&gt;第一章 介绍&lt;/h1&gt;&lt;h2 id=&quot;安全问题的根源&quot;&gt;&lt;a href=&quot;#安全问题的根源&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="网络安全" scheme="https://rainbowtp.top/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+    <category term="kali" scheme="https://rainbowtp.top/tags/kali/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cracer入门</title>
+    <link href="https://rainbowtp.top/wang-luo-an-quan/cracer-ru-men/"/>
+    <id>https://rainbowtp.top/wang-luo-an-quan/cracer-ru-men/</id>
+    <published>2020-05-02T05:32:49.000Z</published>
+    <updated>2021-06-22T05:56:09.121Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;cracer入门-day-1&quot;&gt;&lt;a href=&quot;#cracer入门-day-1&quot; class=&quot;headerlink&quot; title=&quot;cracer入门 day-1&quot;&gt;&lt;/a&gt;cracer入门 day-1&lt;/h1&gt;&lt;h2 id=&quot;1-知识科普&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="网络安全" scheme="https://rainbowtp.top/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+    <category term="网课" scheme="https://rainbowtp.top/tags/%E7%BD%91%E8%AF%BE/"/>
+    
+    <category term="cracer" scheme="https://rainbowtp.top/tags/cracer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git简明笔记</title>
+    <link href="https://rainbowtp.top/gong-ju/git-jian-ming-bi-ji/"/>
+    <id>https://rainbowtp.top/gong-ju/git-jian-ming-bi-ji/</id>
+    <published>2020-04-18T16:12:59.000Z</published>
+    <updated>2021-06-22T05:56:09.119Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Git-commands&quot;&gt;&lt;a href=&quot;#Git-commands&quot; class=&quot;headerlink&quot; title=&quot;Git commands&quot;&gt;&lt;/a&gt;Git commands&lt;/h1&gt;&lt;h2 id=&quot;operation&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="工具" scheme="https://rainbowtp.top/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="git" scheme="https://rainbowtp.top/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>树莓派搭建nas</title>
+    <link href="https://rainbowtp.top/ying-jian/shu-mei-pai-da-jian-nas/"/>
+    <id>https://rainbowtp.top/ying-jian/shu-mei-pai-da-jian-nas/</id>
+    <published>2020-04-16T18:32:34.000Z</published>
+    <updated>2021-06-22T05:56:09.124Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;树莓派搭建nas&quot;&gt;&lt;a href=&quot;#树莓派搭建nas&quot; class=&quot;headerlink&quot; title=&quot;树莓派搭建nas&quot;&gt;&lt;/a&gt;树莓派搭建nas&lt;/h1&gt;&lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件" scheme="https://rainbowtp.top/categories/%E7%A1%AC%E4%BB%B6/"/>
+    
+    
+    <category term="树莓派" scheme="https://rainbowtp.top/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你所不知的孟子</title>
+    <link href="https://rainbowtp.top/wen-xue/ni-suo-bu-zhi-de-meng-zi/"/>
+    <id>https://rainbowtp.top/wen-xue/ni-suo-bu-zhi-de-meng-zi/</id>
+    <published>2020-04-14T05:02:07.000Z</published>
+    <updated>2021-06-22T05:56:09.123Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;你所不知的孟子&quot;&gt;&lt;a href=&quot;#你所不知的孟子&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="文学" scheme="https://rainbowtp.top/categories/%E6%96%87%E5%AD%A6/"/>
+    
+    
+    <category term="文昭" scheme="https://rainbowtp.top/tags/%E6%96%87%E6%98%AD/"/>
+    
+    <category term="孟子" scheme="https://rainbowtp.top/tags/%E5%AD%9F%E5%AD%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>百代宗周</title>
+    <link href="https://rainbowtp.top/wen-xue/bai-dai-zong-zhou/"/>
+    <id>https://rainbowtp.top/wen-xue/bai-dai-zong-zhou/</id>
+    <published>2020-04-06T03:17:51.000Z</published>
+    <updated>2021-06-22T05:56:09.124Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;百代宗周&quot;&gt;&lt;a href=&quot;#百代宗周&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="文学" scheme="https://rainbowtp.top/categories/%E6%96%87%E5%AD%A6/"/>
+    
+    
+    <category term="文昭" scheme="https://rainbowtp.top/tags/%E6%96%87%E6%98%AD/"/>
+    
+    <category term="周" scheme="https://rainbowtp.top/tags/%E5%91%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown语法</title>
+    <link href="https://rainbowtp.top/qian-duan/markdown-yu-fa/"/>
+    <id>https://rainbowtp.top/qian-duan/markdown-yu-fa/</id>
+    <published>2020-03-14T19:52:45.000Z</published>
+    <updated>2021-06-22T05:56:09.120Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Markdown语法&quot;&gt;&lt;a href=&quot;#Markdown语法&quot; class=&quot;headerlink&quot; title=&quot;Markdown语法&quot;&gt;&lt;/a&gt;Markdown语法&lt;/h1&gt;&lt;h2 id=&quot;简明教程&quot;&gt;&lt;a href=&quot;#简明教程&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://rainbowtp.top/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="markdown" scheme="https://rainbowtp.top/tags/markdown/"/>
+    
+  </entry>
+  
+</feed>
